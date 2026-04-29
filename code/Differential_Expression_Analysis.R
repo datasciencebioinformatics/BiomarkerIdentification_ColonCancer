@@ -11,7 +11,7 @@ dds_tumor_normal <- DESeq(dds_tumor_normal)
 res_tumor_normal <- results(dds_tumor_normal, contrast=c("Tissue.Type","Tumor","Normal"))
 
 # Take 
-res_tumor_normal<-data.frame(res_tumor_normal[which(res_tumor_normal$padj<0.05 & abs(res_tumor_normal$log2FoldChange)>2),])
+res_tumor_normal<-data.frame(res_tumor_normal[which(res_tumor_normal$padj<0.01 & abs(res_tumor_normal$log2FoldChange)>3),])
 ########################################################################
 # 2. Save the object to an .rds file
 saveRDS(dds_tumor_normal, file = file.path(project_folder, "/rsd","/dds_tumor_normal.rsd" ))
@@ -43,9 +43,9 @@ res_diagnosis_Metastatic    <- results(dds_diagnosis, contrast=c("diagnosis","Me
 res_diagnosis_Premalignant  <- results(dds_diagnosis, contrast=c("diagnosis","Premalignant","Normal"))
 
 # Take 
-res_diagnosis_Primary     <-data.frame(res_diagnosis_Primary[which(res_diagnosis_Primary$padj<0.05 & abs(res_diagnosis_Primary$log2FoldChange)>2),])
-res_diagnosis_Metastatic  <-data.frame(res_diagnosis_Metastatic[which(res_diagnosis_Metastatic$padj<0.05 & abs(res_diagnosis_Metastatic$log2FoldChange)>2),])
-res_diagnosis_Premalignant<-data.frame(res_diagnosis_Premalignant[which(res_diagnosis_Premalignant$padj<0.05 & abs(res_diagnosis_Premalignant$log2FoldChange)>2),])
+res_diagnosis_Primary     <-data.frame(res_diagnosis_Primary[which(res_diagnosis_Primary$padj<0.01 & abs(res_diagnosis_Primary$log2FoldChange)>3),])
+res_diagnosis_Metastatic  <-data.frame(res_diagnosis_Metastatic[which(res_diagnosis_Metastatic$padj<0.01 & abs(res_diagnosis_Metastatic$log2FoldChange)>3),])
+res_diagnosis_Premalignant<-data.frame(res_diagnosis_Premalignant[which(res_diagnosis_Premalignant$padj<0.01 & abs(res_diagnosis_Premalignant$log2FoldChange)>3),])
 ########################################################################
 # 2. Save the object to an .rds file
 saveRDS(dds_diagnosis, file = file.path(project_folder, "/rsd","/dds_diagnosis.rsd" ))
