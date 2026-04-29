@@ -1,23 +1,37 @@
+#######################################################################################################################################
+# Plot the veen diagram
+all_tumor=rownames(res_tumor_normal)
+primary_tumor=rownames(res_diagnosis_Primary)
+metastatic_tumor=rownames(res_diagnosis_Metastatic)
+premalignant_tumor=rownames(res_diagnosis_Premalignant)
+
+
+# generate the veen diagram1
+stages_tumor_primary_metastatic_premalignant<-ggVennDiagram(list(tumor_genes    =all_tumor, primary=primary_tumor, metastatic=metastatic_tumor, premalignant=premalignant_tumor), label_alpha = 0) + scale_fill_viridis() + theme_bw() + ggtitle("") + theme(legend.position = "bottom",panel.grid = element_blank(), strip.background = element_blank(), panel.border = element_blank(), axis.title.x = element_blank(), axis.title.y = element_blank()) + theme(    axis.ticks.x = element_blank(),    axis.text.x = element_blank()  ) + theme(    axis.ticks.y = element_blank(),    axis.text.y = element_blank()  )
+
+# bwplot               
+png(filename=paste(output_dir,"VennDiagram_DESeq.png",sep=""), width = 25, height = 25, res=600, units = "cm")  
+  # Plot the bayesian network graph
+  stages_tumor_primary_metastatic_premalignant
+dev.off()
+
+#######################################################################################################################################
 # 2. Basic plot
 # 1. Transform data (vst is recommended for large datasets)
-vsd_tumor_normal <- vst(dds_tumor_normal, blind = FALSE)
+vsd_tumor_normal   <- vst(dds_tumor_normal, blind = FALSE)[all_tumor,]
+
 
 # 1. Extract PCA data
-pcaData <- plotPCA(vsd_tumor_normal, intgroup = c("Tissue.Type"), returnData = TRUE)
+pcaData_tumor_normal      <- plotPCA(vsd_tumor_normal, intgroup = c("Tissue.Type"), returnData = TRUE, ntop=length(all_tumor))
 
 # 2. Calculate percentage of variance for axis labels
 percentVar <- round(100 * attr(pcaData, "percentVar"))
 
 # Melt tabele
 # Plot_raw_vibration_data.png                                                                                                            
-png(filename=paste(output_dir,"PCA_Plot_of_RNASeq_Samples_TissueType.png",sep=""), width = 15, height = 15, res=600, units = "cm")  
+png(filename=paste(output_dir,"PCA_DESeq.png",sep=""), width = 20, height = 20, res=600, units = "cm")  
   # 3. Create custom ggplot
-  ggplot(pcaData, aes(x = PC1, y = PC2, color = group)) +
-    geom_point(size = 3) +
-    xlab(paste0("PC1: ", percentVar[1], "% variance")) +
-    ylab(paste0("PC2: ", percentVar[2], "% variance")) +
-    coord_fixed() +
-    theme_minimal()
+  ggplot(pcaData_tumor_normal, aes(x = PC1, y = PC2, color = group)) +   geom_point(size = 3) +   xlab(paste0("PC1: ", percentVar[1], "% variance")) +   ylab(paste0("PC2: ", percentVar[2], "% variance")) +   coord_fixed() +    theme_minimal() + theme(legend.position = "bottom",panel.grid = element_blank(), strip.background = element_blank(), panel.border = element_blank())
 dev.off()
 
 #######################################################################################################################################
@@ -80,6 +94,7 @@ dev.off()
 # Save statistics
 df_mean[rownames(tumor_biomarkers),]
 #######################################################################################################################################
+
 
 
 
