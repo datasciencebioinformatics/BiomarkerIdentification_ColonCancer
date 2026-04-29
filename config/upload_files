@@ -1,0 +1,6 @@
+sudo cp /home/felipe/Downloads/BiomarkerIdentification_ColonCancer/data/* ./
+sudo git add .
+sudo git push origin main
+sudo git commit -m "Your descriptive message"
+sudo git checkout main
+sudo git push
