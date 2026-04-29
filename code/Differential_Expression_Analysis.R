@@ -58,3 +58,15 @@ saveRDS(res_diagnosis_Premalignant, file = file.path(project_folder, "/rsd","/re
 
 
 
+#######################################################################################################################################
+# Plot the veen diagram
+all_tumor=res_tumor_normal$Gene
+primary_tumor=res_diagnosis_Primary$Gene
+metastatic_tumor=res_diagnosis_Metastatic$Gene
+premalignant_tumor=res_diagnosis_Premalignant$Gene
+
+stages_I_II_III<-ggVennDiagram(list(tumor_genes    =res_diagnosis_Primary$Gene), label_alpha = 0) + scale_fill_viridis() + theme_bw() + ggtitle("Stages I, II and III")
+
+
+
+
