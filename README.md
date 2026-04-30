@@ -1,8 +1,8 @@
 # BiomarkerIdentification_ColonCancer
 ###################################################################################################
 ## Pre-configuration
-project_folder="/home/felipe/Documents/ BiomarkerIdentificationCohort_ColonCancer/"
-project_folder="C:/Users/felip/OneDrive/Documentos/GitHub/ BiomarkerIdentificationCohort_ColonCancer/"
+project_folder="/home/felipe/Documents/BiomarkerIdentification_ColonCancer/"
+project_folder="C:/Users/felip/OneDrive/Documentos/GitHub/BiomarkerIdentification_ColonCancer/"
 
 ### 1- Load R packages
 source(paste(project_folder,"/code/Load_All_R_Packages.R",sep=""))
