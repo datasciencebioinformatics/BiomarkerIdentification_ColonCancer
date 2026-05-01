@@ -46,5 +46,7 @@ selected_variables<-c("File.ID","samples.tissue_type", "demographic.age_at_index
 metadata<-unique(merged_data_patient_info[,selected_variables])
 
 # From the File.ID, only the ID is kept in the variable sample_id
-write_xlsx(metadata,"/home/felipe/Downloads/metadata.xlsx")
+write_xlsx(metadata,paste(project_folder,"tables/metadata.xlsx",sep=""))
+
+
 
