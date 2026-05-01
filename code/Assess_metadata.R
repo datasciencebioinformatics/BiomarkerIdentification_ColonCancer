@@ -1,7 +1,8 @@
 # Selected variables
 selected_variables<-c("samples.tissue_type", "demographic.age_at_index", "demographic.ethnicity", "demographic.gender", "demographic.race", "diagnoses.tissue_or_organ_of_origin")
 
-#
+# Set zero to NA
+metadata$demographic.age_at_index[metadata$demographic.age_at_index == "'--" ] <- NA
 ##############################################################################################
 # Percentage of complete data
 complete_data_per_variable<-data.frame(variable=c(),completeness=c())
@@ -56,6 +57,10 @@ df_cumsum[which(df_cumsum$demographic.gender=="female" & df_cumsum$samples.tissu
 # Create the barplot
 p1<-ggplot(data=df_cumsum, aes(x=demographic.gender, y=value, fill=samples.tissue_type)) +  geom_bar(stat="identity")+  geom_text(aes(y=label_ypos, label=value), vjust=1.6,  color="white", size=3.5)+  scale_fill_brewer(palette="Paired")+  theme_minimal()  + theme(legend.position = "bottom",panel.grid = element_blank())  + coord_flip()
 ##############################################################################################
+# bwplot               
+png(filename=paste(output_dir,"Plot_demographic_gender_samples_tissue_type.png",sep=""), width = 15, height = 15, res=600, units = "cm")  
+  p1
+dev.off()
 
 ##############################################################################################
 # https://www.sthda.com/english/wiki/ggplot2-barplots-quick-start-guide-r-software-and-data-visualization
@@ -110,8 +115,9 @@ df_cumsum$value[df_cumsum$value == 0] <- NA
 # Create the barplot
 p2<-ggplot(data=df_cumsum, aes(x=demographic.race, y=value, fill=samples.tissue_type)) +  geom_bar(stat="identity")+  geom_text(aes(y=label_ypos, label=value), vjust=1.6,  color="white", size=3.5)+  scale_fill_brewer(palette="Paired")+  theme_minimal()  + theme(legend.position = "bottom",panel.grid = element_blank())  + coord_flip()
 ##############################################################################################
-# Arrange plot.
-# Plan next steps.
-# Send to zendo.
+# bwplot               
+png(filename=paste(output_dir,"Plot_demographic_race_samples_tissue_type.png",sep=""), width = 15, height = 15, res=600, units = "cm")  
+  p2
+dev.off()
 
 
