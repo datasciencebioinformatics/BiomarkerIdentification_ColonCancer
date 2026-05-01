@@ -9,22 +9,30 @@ source(paste(project_folder,"/code/Number_of_cases.R",sep=""))
 
 ### 2- Load R packages
 source(paste(project_folder,"/code/Load_All_R_Packages.R",sep=""))
-###################################################################################################
-## Differential expression framework in R
+
 ### 3- Add the version control
 source(paste(project_folder,"/code/Version_Control.R",sep=""))
+###################################################################################################
+## Data analayss
+### 4- Load metadata
+source(paste(project_folder,"/code/Load_metadata.R",sep=""))
 
-### 4- Generate read counts table 
+### 5- Assess metadata
+source(paste(project_folder,"/code/Assess_metadata.R",sep=""))
+
+###################################################################################################
+## Differential expression framework in R
+### 6- Generate read counts table 
 source(paste(project_folder,"/code/Generate_read_counts_table.R",sep=""))
 
-### 5- Differential expression analyss
+### 7- Differential expression analyss
 source(paste(project_folder,"/code/Differential_Expression_Analysis.R",sep=""))
 ###################################################################################################
 
 ## Biomarker assessment
-### 6- Biomarkers identification
+### 8- Biomarkers identification
 source(paste(project_folder,"/code/Biomarkers_Identification.R",sep=""))
 
-### 7- Biomarkers assessment
+### 9- Biomarkers assessment
 source(paste(project_folder,"/code/Biomarkers_Assessment.R",sep=""))
 ###################################################################################################
