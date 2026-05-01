@@ -40,19 +40,10 @@ merged_data_patient_info$sample_id<-gsub(".rna_seq.augmented_star_gene_counts.ts
 merged_data_patient_info<-metadata[which(metadata$diagnoses.tissue_or_organ_of_origin ==  "Colon, NOS"),]
 
 # Selected variables
-selected_variables<-c("samples.tissue_type",	"samples.tumor_descriptor",	"cases.disease_type",	"cases.index_date",	"cases.primary_site",	"demographic.age_at_index",	"demographic.ethnicity",	"demographic.gender",	"demographic.race",	"demographic.sex_at_birth",	"diagnoses.ajcc_clinical_stage",	"diagnoses.ajcc_pathologic_m",	"diagnoses.ajcc_pathologic_n",	"diagnoses.ajcc_pathologic_stage",	"diagnoses.ajcc_pathologic_t",	"diagnoses.classification_of_tumor",	"diagnoses.primary_diagnosis",	"diagnoses.tissue_or_organ_of_origin",	"diagnoses.tumor_grade","exposures.tobacco_smoking_status","File.ID", "File.Name",	"Data.Category", "Data.Type",	"Project.ID",	"Case.ID",	"Sample.ID",	"Tissue.Type",	"Tumor.Descriptor",	"Specimen.Type",	"Preservation.Method",	"sample_id")
-#selected_variables<-c("samples.tissue_type",	"samples.tumor_descriptor",	"cases.disease_type",	"cases.index_date",	"cases.primary_site",	"demographic.age_at_index",	"demographic.ethnicity",	"demographic.gender",	"demographic.race",	"demographic.sex_at_birth",	"diagnoses.ajcc_clinical_stage",	"diagnoses.ajcc_pathologic_m",	"diagnoses.ajcc_pathologic_n",	"diagnoses.ajcc_pathologic_stage",	"diagnoses.ajcc_pathologic_t",	"diagnoses.classification_of_tumor",	"diagnoses.primary_diagnosis",	"diagnoses.tissue_or_organ_of_origin",	"diagnoses.tumor_grade","exposures.tobacco_smoking_status","File.ID", "File.Name",	"Data.Category", "Data.Type",	"Tissue.Type",	"Tumor.Descriptor",	"Specimen.Type",	"Preservation.Method")
+selected_variables<-c("File.ID","samples.tissue_type", "demographic.age_at_index", "demographic.ethnicity", "demographic.gender", "demographic.race", "diagnoses.tissue_or_organ_of_origin")
 
 # Select metadata 
 metadata<-unique(merged_data_patient_info[,selected_variables])
-
-# Filter data to keep only data that is already on the count table
-metadata[which(metadata$diagnoses.tissue_or_organ_of_origin ==  "Colon, NOS"),]
-
-metadata$File.ID[metadata$File.ID %in% colnames(read_counts_table)]
-
-
-
 
 # From the File.ID, only the ID is kept in the variable sample_id
 write_xlsx(metadata,"/home/felipe/Downloads/metadata.xlsx")
