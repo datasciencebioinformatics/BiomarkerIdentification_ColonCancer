@@ -125,7 +125,7 @@ dev.off()
 
 # bwplot               
 png(filename=paste(output_dir,"Variable_completeness.png",sep=""), width = 15, height = 15, res=600, units = "cm")  
-  ggplot(metadata, aes(x=as.factor(samples.tissue_type), y=as.numeric(demographic.age_at_index))) +  geom_boxplot(lpha=0.2)  + theme_bw()
+  ggplot(metadata, aes(x=as.factor(samples.tissue_type), y=as.numeric(demographic.age_at_index))) +  geom_boxplot(lpha=0.2)  + theme_bw()+  scale_fill_brewer(palette="Paired")
 dev.off()
 
 
