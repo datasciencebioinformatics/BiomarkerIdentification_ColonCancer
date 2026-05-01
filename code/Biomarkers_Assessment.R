@@ -31,7 +31,7 @@ percentVar <- round(100 * attr(pcaData, "percentVar"))
 # Plot_raw_vibration_data.png                                                                                                            
 png(filename=paste(output_dir,"PCA_DESeq.png",sep=""), width = 20, height = 20, res=600, units = "cm")  
   # 3. Create custom ggplot
-  ggplot(pcaData_tumor_normal, aes(x = PC1, y = PC2, color = group)) +   geom_point(size = 3) +   xlab(paste0("PC1: ", percentVar[1], "% variance")) +   ylab(paste0("PC2: ", percentVar[2], "% variance")) +   coord_fixed() +    theme_minimal() + theme(legend.position = "bottom",panel.grid = element_blank(), strip.background = element_blank(), panel.border = element_blank()) 
+  ggplot(pcaData_tumor_normal, aes(x = PC1, y = PC2, color = group)) +   geom_point(size = 3) +   xlab(paste0("PC1: ", percentVar[1], "% variance")) +   ylab(paste0("PC2: ", percentVar[2], "% variance")) +   coord_fixed() +    theme_minimal() + theme(legend.position = "bottom",panel.grid = element_blank(), strip.background = element_blank(), panel.border = element_blank()) + scale_color_grey()
 dev.off()
 
 #######################################################################################################################################
