@@ -27,6 +27,7 @@ merged_sample_clinical_data<-merge(merged_sample_clinical_data,exposure_data,by.
 
 # Merge tables
 merged_data_patient_info<-merge(merged_sample_clinical_data,gdc_sample_sheet_data,by.x="samples.submitter_id",by.y="sample_submitter_id")
+
 #####################################################################################################################
 # Set file name variable 
 merged_data_patient_info<-merged_data_patient_info[merged_data_patient_info$Data.Category=="Transcriptome Profiling",]
@@ -37,6 +38,15 @@ merged_data_patient_info<-merged_data_patient_info[which(grepl(pattern="*.rna_se
 # From the File.ID, only the ID is kept in the variable sample_id
 merged_data_patient_info$sample_id<-gsub(".rna_seq.augmented_star_gene_counts.tsv", "", merged_data_patient_info$File.Name)
 
+# Selected variables
+selected_variables<-c("samples.tissue_type",	"samples.tumor_descriptor",	"cases.disease_type",	"cases.index_date",	"cases.primary_site",	"demographic.age_at_index",	"demographic.ethnicity",	"demographic.gender",	"demographic.race",	"demographic.sex_at_birth",	"diagnoses.ajcc_clinical_stage",	"diagnoses.ajcc_pathologic_m",	"diagnoses.ajcc_pathologic_n",	"diagnoses.ajcc_pathologic_stage",	"diagnoses.ajcc_pathologic_t",	"diagnoses.classification_of_tumor",	"diagnoses.primary_diagnosis",	"diagnoses.tissue_or_organ_of_origin",	"diagnoses.tumor_grade","exposures.tobacco_smoking_status","File.ID", "File.Name",	"Data.Category", "Data.Type",	"Project.ID",	"Case.ID",	"Sample.ID",	"Tissue.Type",	"Tumor.Descriptor",	"Specimen.Type",	"Preservation.Method",	"sample_id")
+
+# Select metadata 
+metadata<-unique(merged_data_patient_info[,selected_variables])
+
+
+
+
 # From the File.ID, only the ID is kept in the variable sample_id
-write_xlsx(merged_data_patient_info,"/home/felipe/Downloads/merged_data_patient_info")
+write_xlsx(merged_data_patient_info,"/home/felipe/Downloads/merged_data_patient_info.xlsx")
 
