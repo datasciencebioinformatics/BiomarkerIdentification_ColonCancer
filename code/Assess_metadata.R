@@ -114,10 +114,20 @@ df_cumsum$value[df_cumsum$value == 0] <- NA
 
 # Create the barplot
 p2<-ggplot(data=df_cumsum, aes(x=demographic.race, y=value, fill=samples.tissue_type)) +  geom_bar(stat="identity")+  geom_text(aes(y=label_ypos, label=value), vjust=1.6,  color="white", size=3.5)+  scale_fill_brewer(palette="Paired")+  theme_minimal()  + theme(legend.position = "bottom",panel.grid = element_blank())  + coord_flip()
-##############################################################################################
+
 # bwplot               
 png(filename=paste(output_dir,"Plot_demographic_race_samples_tissue_type.png",sep=""), width = 15, height = 15, res=600, units = "cm")  
   p2
 dev.off()
+
+###########################################################################################################################
+# Age plot
+
+# bwplot               
+png(filename=paste(output_dir,"Variable_completeness.png",sep=""), width = 15, height = 15, res=600, units = "cm")  
+  ggplot(metadata, aes(x=as.factor(samples.tissue_type), y=as.numeric(demographic.age_at_index))) +  geom_boxplot(lpha=0.2)  + theme_bw()
+dev.off()
+
+
 
 
