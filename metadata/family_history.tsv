@@ -1,0 +1,211 @@
+project.project_id	cases.case_id	cases.submitter_id	family_histories.family_history_id	family_histories.relationship_age_at_diagnosis	family_histories.relationship_gender	family_histories.relationship_primary_diagnosis	family_histories.relationship_sex_at_birth	family_histories.relationship_type	family_histories.relative_deceased	family_histories.relative_smoker	family_histories.relative_with_cancer_history	family_histories.relatives_with_cancer_history_count	family_histories.submitter_id
+TCGA-BLCA	0198d8e5-a14b-44ee-b1c4-d248994845ad	TCGA-DK-AA74	'--	'--	'--	Cervical Cancer	'--	Sister	'--	'--	yes	'--	'--
+TCGA-BLCA	0198d8e5-a14b-44ee-b1c4-d248994845ad	TCGA-DK-AA74	'--	'--	'--	Breast Cancer	'--	Mother	'--	'--	yes	'--	'--
+TCGA-COAD	01ad5016-f691-4bca-82a0-910429d8d25b	TCGA-AA-3561	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+HCMI-CMDC	029399ba-21fa-4e49-8ddf-f73e4704858a	HCM-SANG-1337-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	no	'--	'--
+TCGA-COAD	02f9668c-71e6-485f-88b1-b37dc8bdd2ab	TCGA-AA-3866	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+HCMI-CMDC	031b40e7-2e1d-43e9-83a1-a4fae1e1e6a4	HCM-WCMC-0504-C18	'--	'--	'--	Cancer	'--	First Degree Relative, NOS	'--	'--	yes	'--	'--
+HCMI-CMDC	04b88744-7738-4bc2-ab67-14545f5b761f	HCM-STAN-0841-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	no	'--	'--
+TCGA-COAD	04d7a52f-a89b-4114-a608-a6254b4d604f	TCGA-AA-3986	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+HCMI-CMDC	0600672e-3077-4545-bc1d-974ebc60b25c	HCM-EXPT-1253-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	unknown	'--	'--
+HCMI-CMDC	0608526c-70d5-4740-a9eb-1cce282ddd15	HCM-SANG-1332-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	unknown	'--	'--
+HCMI-CMDC	06d42c21-4c97-4171-ac00-3979a51a59d9	HCM-CSHL-0160-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	no	'--	'--
+HCMI-CMDC	07a067d0-7dfc-4817-b4c5-9200da20a59f	HCM-SANG-0268-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	unknown	'--	'--
+TCGA-COAD	09942e9f-c178-44bc-9cd9-f5bfa350b23f	TCGA-AA-3519	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+HCMI-CMDC	0a6a14db-ca5c-4bf9-9125-611d672bc67b	HCM-SANG-0271-D12	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	no	'--	'--
+TCGA-COAD	0b8de222-119a-40f3-8beb-12b9d933225b	TCGA-AA-3856	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+HCMI-CMDC	0e9a9e97-f0bf-4f4a-84cc-73eccfc627b1	HCM-CSHL-0376-D37	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	no	'--	'--
+TCGA-COAD	0ec6ed47-db99-4273-9823-ffbde6a77091	TCGA-A6-6651	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+TCGA-COAD	0f940ec0-eb0b-422a-a764-a26c8e5c216d	TCGA-AA-3837	'--	'--	'--	Cancer	'--	'--	'--	'--	yes	2	'--
+TCGA-COAD	10994156-7c2f-420e-aeb8-11d566b3d5e4	TCGA-AA-3971	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+TCGA-READ	1118490d-75aa-43cc-b2a2-c2af61829ffc	TCGA-AG-A01N	'--	'--	'--	Colorectal Cancer	'--	'--	'--	'--	no	'--	'--
+HCMI-CMDC	118bf677-caed-4f7f-a837-dd966dce5ca7	HCM-CSHL-0061-C18	'--	'--	'--	Cancer	'--	First Degree Relative, NOS	'--	'--	yes	'--	'--
+HCMI-CMDC	12603388-e5f0-45ac-ab7b-3a839de7a9e8	HCM-SANG-1335-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	no	'--	'--
+TCGA-COAD	127f738d-afa1-42f6-a9a0-f33806667b84	TCGA-AA-3562	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+TCGA-COAD	131e0571-de86-415f-b3fb-dc9f971258d3	TCGA-D5-6932	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+TCGA-READ	1388bba1-02ba-40df-93e5-c3d58b7bbae0	TCGA-AG-4015	'--	'--	'--	Colorectal Cancer	'--	'--	'--	'--	no	'--	'--
+HCMI-CMDC	13f33795-7d8b-411d-8b33-998e66e484ea	HCM-CSHL-0621-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	unknown	'--	'--
+HCMI-CMDC	149f1630-7134-4ac2-a350-6bee91ef8386	HCM-EXPT-1195-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	unknown	'--	'--
+TCGA-COAD	14c13b05-abfe-472e-83a9-b28f60e58ad8	TCGA-G4-6310	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+HCMI-CMDC	14d24b35-141b-4743-b4a9-321e2393bb54	HCM-CSHL-0625-C18	'--	'--	'--	Cancer	'--	First Degree Relative, NOS	'--	'--	yes	'--	'--
+HCMI-CMDC	157d4813-8461-4593-8232-863c7ace4b35	HCM-CSHL-0860-C18	'--	'--	'--	Cancer	'--	First Degree Relative, NOS	'--	'--	yes	'--	'--
+TCGA-COAD	17633a60-e12b-4a7c-bd8a-c16341ddc606	TCGA-CA-5256	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+TCGA-COAD	192da41f-f0a5-494e-8eb9-96bcdae56ff8	TCGA-AA-3819	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+TCGA-COAD	19d1a5fc-3ce9-4e43-a364-a4150bcf911b	TCGA-A6-2686	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+TCGA-COAD	1a09207e-9184-4f32-bd07-a9f4dc6c825d	TCGA-AA-3833	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+TCGA-COAD	1add38c2-df6f-47c9-9373-0bec0e40baf8	TCGA-AA-3851	'--	'--	'--	Cancer	'--	'--	'--	'--	yes	1	'--
+HCMI-CMDC	1bd5b5e6-3a81-4624-8241-ee006a272e5c	HCM-EXPT-1242-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	unknown	'--	'--
+HCMI-CMDC	2085d720-f57e-47a0-9355-c0f64fc363a9	HCM-EXPT-1219-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	unknown	'--	'--
+TCGA-COAD	20ccd267-74e5-4574-a8e1-028bcd74aaeb	TCGA-AA-3872	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+HCMI-CMDC	23443700-fe39-4fd5-862f-ffb02cda3947	HCM-CSHL-0141-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	unknown	'--	'--
+HCMI-CMDC	24da43ae-b254-4238-9b55-813ccb1e8f35	HCM-EXPT-1221-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	unknown	'--	'--
+HCMI-CMDC	25455ba4-759e-467d-b880-c938c9f39408	HCM-EXPT-1198-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	unknown	'--	'--
+TCGA-COAD	25c3201a-3dd5-4edf-ad09-104e5c10663e	TCGA-A6-5666	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+TCGA-COAD	26a12266-c6d8-42f9-bd4e-5093d827ac9a	TCGA-AM-5820	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+RC-PTCL	27caa59f-dcbd-4594-9cfb-968dd5c64248	RC-B65O	'--	'--	'--	Colorectal Cancer	'--	Mother	'--	'--	yes	'--	'--
+TCGA-COAD	27e2438d-bd01-4c50-9102-563276ed9922	TCGA-D5-6898	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+TCGA-COAD	28033279-cc74-4775-afdf-2497f6ddb55c	TCGA-AA-3506	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+HCMI-CMDC	28f77d34-e59d-4b80-8885-88d11c2ced74	HCM-CSHL-0727-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	no	'--	'--
+TCGA-ESCA	29da08f4-c9e2-4e7a-9733-b4ec5b9c5f13	TCGA-L5-A43M	'--	'--	'--	Esophageal Cancer	'--	'--	'--	'--	no	'--	'--
+HCMI-CMDC	29df97f4-6e7e-48a0-a320-09df82fc0b81	HCM-SANG-0275-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	unknown	'--	'--
+HCMI-CMDC	2b7832fe-682f-4bca-97ec-5f7bf6070e5f	HCM-CSHL-1269-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	no	'--	'--
+TCGA-COAD	2c0a725a-e829-4d84-89d9-d0d47f6cfa37	TCGA-G4-6628	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+TCGA-COAD	2c9996bb-af6e-4424-881a-e81b9c9aeb78	TCGA-AA-3688	'--	'--	'--	Cancer	'--	'--	'--	'--	yes	1	'--
+TCGA-COAD	2dced66c-1f0d-4039-a5e5-54cca77c16e9	TCGA-AA-3548	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+HCMI-CMDC	2f2f82b6-f842-46d6-b381-cd315e34f122	HCM-EXPT-1196-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	unknown	'--	'--
+RC-PTCL	34346953-8831-492b-ac83-207fd7f296d2	RC-B6SK	'--	'--	'--	Lung Cancer	'--	Father	'--	'--	yes	'--	'--
+RC-PTCL	34346953-8831-492b-ac83-207fd7f296d2	RC-B6SK	'--	'--	'--	Colorectal Cancer	'--	Sister	'--	'--	yes	'--	'--
+HCMI-CMDC	35e5f3ec-89ea-4859-914c-5995b7162a0d	HCM-SANG-1339-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	no	'--	'--
+TCGA-COAD	36eaf209-c332-4321-b6aa-51a3368ecd79	TCGA-AA-3555	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+HCMI-CMDC	37e1311a-a125-4ea8-9db1-1f1b14f87856	HCM-SANG-1327-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	no	'--	'--
+TCGA-COAD	384400c1-98d6-4cc3-8724-de6711f6208b	TCGA-AA-3980	'--	'--	'--	Cancer	'--	'--	'--	'--	yes	1	'--
+HCMI-CMDC	388c484f-639a-448c-882e-2897f29e55b2	HCM-SANG-0288-C18	'--	'--	'--	Cancer	'--	First Degree Relative, NOS	'--	'--	yes	'--	'--
+HCMI-CMDC	3b797720-33ef-45e0-9830-5f6007f1d5a7	HCM-CSHL-0060-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	no	'--	'--
+HCMI-CMDC	3dab73f4-1fd2-440d-a194-4368818ee701	HCM-SANG-0280-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	unknown	'--	'--
+TCGA-COAD	44c2854e-3f8c-48e1-b4d5-1b5778d4fce4	TCGA-AA-3858	'--	'--	'--	Cancer	'--	'--	'--	'--	yes	1	'--
+TCGA-COAD	49929108-023e-4d35-b26d-50ab4d3ae581	TCGA-A6-2684	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+HCMI-CMDC	4e99c213-bf46-4b46-a85c-653bae172b0e	HCM-EXPT-1247-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	unknown	'--	'--
+TCGA-COAD	4f786107-3cf5-4ab3-bba4-f399dee23f0e	TCGA-AA-3844	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+TCGA-COAD	4f9775f2-b663-4daf-aa9e-50915cae9407	TCGA-A6-3808	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+HCMI-CMDC	5029f6b9-2698-47af-b309-929888fe8263	HCM-EXPT-1220-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	unknown	'--	'--
+TCGA-LIHC	518aa9cc-71cf-4734-9d55-b435da99d300	TCGA-DD-A4NI	'--	'--	'--	Cancer	'--	'--	'--	'--	yes	6	'--
+HCMI-CMDC	54722e41-2feb-4c8a-b29f-3780da916e49	HCM-SANG-0267-D12	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	no	'--	'--
+HCMI-CMDC	551f7d70-23b0-4deb-8a8e-b063457fb435	HCM-EXPT-1239-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	unknown	'--	'--
+HCMI-CMDC	56a4bd00-b687-4869-9966-25a6caef8ced	HCM-EXPT-1252-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	unknown	'--	'--
+TCGA-BLCA	573e124f-98cb-4014-b9d2-0499f7fbdb7a	TCGA-UY-A78N	'--	'--	'--	Cancer	'--	Father	'--	'--	yes	'--	'--
+TCGA-BLCA	573e124f-98cb-4014-b9d2-0499f7fbdb7a	TCGA-UY-A78N	'--	'--	'--	Gastric Cancer	'--	Brother	'--	'--	yes	'--	'--
+TCGA-COAD	57a2044d-20cc-4d02-b268-ce570a0fabe3	TCGA-AA-3713	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+HCMI-CMDC	57eaeb64-3172-4f2b-bc38-33d703ded1f6	HCM-EXPT-1205-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	unknown	'--	'--
+TCGA-COAD	58facedb-fcb8-4ecf-8338-2bfa4947acef	TCGA-A6-6141	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+TCGA-COAD	5a195baa-2d05-4273-a7c4-64cc816b0406	TCGA-AA-3982	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+TCGA-COAD	5c24435e-8e50-42c2-80c7-919b1cad0133	TCGA-AA-3955	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+HCMI-CMDC	5f93dc35-0917-4206-bc5f-8903db299abc	HCM-SANG-1315-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	unknown	'--	'--
+HCMI-CMDC	603035e9-eef7-490a-a102-af4eb005fb73	HCM-WCMC-0671-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	unknown	'--	'--
+HCMI-CMDC	6058fb8d-eb5d-4dbc-b939-7e92c7cd2776	HCM-CSHL-0164-C20	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	no	'--	'--
+HCMI-CMDC	6113f817-ab45-4d67-9050-92e24cb69669	HCM-EXPT-1197-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	unknown	'--	'--
+HCMI-CMDC	6223b52d-1861-4c93-82ab-db79e117fbbc	HCM-EXPT-1249-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	unknown	'--	'--
+HCMI-CMDC	63bb50c3-9857-4c9b-a765-7227943e070c	HCM-EXPT-1228-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	unknown	'--	'--
+TCGA-COAD	64b0461f-038d-4712-948e-818dc2f10eef	TCGA-D5-6929	'--	'--	'--	Cancer	'--	'--	'--	'--	yes	1	'--
+TCGA-COAD	654c6f5c-3e5c-49f0-b53f-87cd9797d7c9	TCGA-AA-3947	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+TCGA-COAD	67ba29e7-f294-4dcd-9630-ad768c22c588	TCGA-AA-3494	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+HCMI-CMDC	67e3c17e-e524-4681-8162-99742c802256	HCM-CSHL-0238-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	no	'--	'--
+TCGA-COAD	68801d41-535f-4b38-989b-ef4fe5f00039	TCGA-A6-6653	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+HCMI-CMDC	6bbc3ea9-7cd3-4526-9d1e-bacab5b50d42	HCM-CSHL-1097-C18	'--	'--	'--	Colorectal Cancer	'--	First Degree Relative, NOS	'--	'--	yes	'--	'--
+TCGA-COAD	6fc5e56a-1f5e-4ff1-948e-5ef636ebb48d	TCGA-AA-3852	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+TCGA-READ	72802851-9340-4c5f-a90b-23b7afd7577a	TCGA-AG-4008	'--	'--	'--	Colorectal Cancer	'--	'--	'--	'--	no	'--	'--
+HCMI-CMDC	72b32ae9-d75d-43d4-a094-04b457ed99a6	HCM-SANG-1321-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	no	'--	'--
+HCMI-CMDC	741236d1-b662-47a6-b1f4-94dfc004efca	HCM-EXPT-1261-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	unknown	'--	'--
+TCGA-COAD	750770db-53cf-4021-a8c2-5e0ddb97fef5	TCGA-AA-3994	'--	'--	'--	Cancer	'--	'--	'--	'--	yes	1	'--
+TCGA-COAD	77a44132-af22-4115-9fa2-78f2f74bf687	TCGA-A6-2682	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+TCGA-COAD	7a6c54f1-f4e4-426b-b306-2ca3c4de12ca	TCGA-AA-3854	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+TCGA-COAD	7d8eab0a-e6c8-4449-9ebf-50c41db94a06	TCGA-A6-2681	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+TCGA-COAD	7dfbc0ed-e684-4966-8b59-fb6b9e80c129	TCGA-AA-3841	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+HCMI-CMDC	7ee0c283-701b-47ac-bc3a-30f45e5c4eb2	HCM-CSHL-0382-C19	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	no	'--	'--
+HCMI-CMDC	7fa8bc57-4bc7-48a5-99fe-98ed02fa17e8	HCM-CSHL-0247-C18	'--	'--	'--	Cancer	'--	First Degree Relative, NOS	'--	'--	yes	'--	'--
+TCGA-COAD	80311cf5-7e18-4545-92ad-c4b7dd5c9677	TCGA-AA-3842	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+HCMI-CMDC	80662c9b-a131-4e8e-8622-07eca4e1127b	HCM-CSHL-0863-C18	'--	'--	'--	Colorectal Cancer	'--	First Degree Relative, NOS	'--	'--	yes	'--	'--
+HCMI-CMDC	80e571e3-8edf-40ff-883d-bce4e31acac2	HCM-SANG-1314-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	no	'--	'--
+TCGA-COAD	81555ac5-9cc2-49ae-9033-657f56243f20	TCGA-AA-3939	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+HCMI-CMDC	81d695dd-8c6d-42fc-b169-52996a7d93ad	HCM-CSHL-0878-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	no	'--	'--
+TCGA-COAD	81e7cca8-2d71-4446-9692-872c2fe68d0a	TCGA-A6-6654	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+HCMI-CMDC	82ce9f95-f322-4867-8abb-266b5b8289d0	HCM-SANG-1316-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	no	'--	'--
+TCGA-COAD	835c3e23-ac2b-4bc9-ac65-e3e81adecf77	TCGA-AA-3941	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+TCGA-COAD	8368d745-c74d-4236-ba75-16ca7aaeb3ca	TCGA-AA-3502	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+HCMI-CMDC	83d72552-6453-4a48-a2a5-68b9c02af103	HCM-EXPT-1194-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	unknown	'--	'--
+TCGA-COAD	8632579e-d318-4dab-9994-d3945afc42ab	TCGA-A6-3809	'--	'--	'--	Cancer	'--	'--	'--	'--	yes	1	'--
+TCGA-COAD	89a6384e-1cea-440b-9f17-d57cb0805174	TCGA-A6-2676	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+HCMI-CMDC	8badcb2e-30f1-47ad-91f1-d832d6289f6a	HCM-CSHL-0618-C18	'--	'--	'--	Colorectal Cancer	'--	First Degree Relative, NOS	'--	'--	yes	'--	'--
+TCGA-READ	8e00e7e7-ffaf-44f0-91a7-172671f18e08	TCGA-AG-4007	'--	'--	'--	Colorectal Cancer	'--	'--	'--	'--	no	'--	'--
+TCGA-LIHC	8eef926b-f316-4fdb-b84a-262010258feb	TCGA-UB-A7MF	'--	'--	'--	Cancer	'--	'--	'--	'--	yes	1	'--
+TCGA-READ	92c65e5a-3f07-49d9-ab69-46a0eb86ae88	TCGA-AG-3882	'--	'--	'--	Colorectal Cancer	'--	'--	'--	'--	no	'--	'--
+HCMI-CMDC	93e57b22-1606-47a8-88de-482159a8623d	HCM-CSHL-0653-C18	'--	'--	'--	Cancer	'--	First Degree Relative, NOS	'--	'--	yes	'--	'--
+TCGA-COAD	93edb105-5dc9-4a4a-9fca-c91f0161fcc7	TCGA-AA-3511	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+HCMI-CMDC	94780bed-98b3-4556-ac0d-7b998921c4c0	HCM-BROD-0959-C18	'--	'--	'--	Cancer	'--	First Degree Relative, NOS	'--	'--	yes	'--	'--
+HCMI-CMDC	964de890-fe31-4b2d-98ce-a8d8e95a7da2	HCM-SANG-1313-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	no	'--	'--
+HCMI-CMDC	96dea2e6-e29b-4e09-b708-ae3b010a9906	HCM-SANG-0284-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	no	'--	'--
+TCGA-ESCA	97394c78-2815-4348-b4c9-df0b3b3d6b5e	TCGA-JY-A938	'--	'--	'--	Esophageal Cancer	'--	'--	'--	'--	no	'--	'--
+TCGA-COAD	9c34830b-4d7f-4b41-9659-fbfc36c145c9	TCGA-D5-6529	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+HCMI-CMDC	9d76f109-f7b0-44c6-9c88-cc21e908dc79	HCM-EXPT-1250-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	unknown	'--	'--
+HCMI-CMDC	9ee323b8-6447-4447-b70f-a7260b3b8f8e	HCM-CSHL-0239-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	no	'--	'--
+TCGA-BLCA	9ee8e704-c61d-413d-b69d-257ef829fdae	TCGA-GV-A3QK	'--	'--	'--	Gastric Cancer	'--	Mother	'--	'--	yes	'--	'--
+HCMI-CMDC	a02b068f-adff-47ca-82fb-2f03a34cd75f	HCM-WCMC-1344-C18	'--	'--	'--	Colorectal Cancer	'--	First Degree Relative, NOS	'--	'--	yes	'--	'--
+HCMI-CMDC	a13f7c10-76c8-473a-b87b-8b680706d189	HCM-SANG-0281-C18	'--	'--	'--	Colorectal Cancer	'--	First Degree Relative, NOS	'--	'--	yes	'--	'--
+HCMI-CMDC	a30d5ca4-146c-43d6-b3f3-ca3ec860f777	HCM-WCMC-1294-C18	'--	'--	'--	Cancer	'--	First Degree Relative, NOS	'--	'--	yes	'--	'--
+TCGA-COAD	a512701f-88bb-4b05-8c94-fd285b9dd13e	TCGA-AA-3666	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+HCMI-CMDC	a54e76e9-7d37-4f9d-9b63-f2fa25f1b1b1	HCM-SANG-1311-C18	'--	'--	'--	Cancer	'--	First Degree Relative, NOS	'--	'--	yes	'--	'--
+HCMI-CMDC	a691cd0c-1878-47a6-8a0f-37e4fe12d20a	HCM-CSHL-0393-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	unknown	'--	'--
+TCGA-COAD	a9cb21d1-4c4a-4f30-ad4d-c54bed26f187	TCGA-AA-3975	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+TCGA-COAD	aa85d9e8-caa6-422c-95ce-780e4ac2a5e4	TCGA-AA-3532	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+HCMI-CMDC	ab4f0038-1f79-47cf-a88d-0c8587df3bbe	HCM-SANG-0277-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	unknown	'--	'--
+HCMI-CMDC	add1a8ad-6a0a-4945-b1e4-2bbe3f554421	HCM-EXPT-1226-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	unknown	'--	'--
+TCGA-COAD	ae6b315f-3f78-4695-adfa-48b0bbab2c89	TCGA-D5-5537	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+HCMI-CMDC	b1021eee-f5c8-43a7-aab9-79553bca2265	HCM-CSHL-0461-D12	'--	'--	'--	Cancer	'--	First Degree Relative, NOS	'--	'--	yes	'--	'--
+TCGA-COAD	b107565b-7558-4745-952b-689178367e1c	TCGA-AA-3525	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+TCGA-BLCA	b319798a-3f35-4902-8ecf-5be529d99312	TCGA-XF-A9SJ	'--	'--	'--	Breast Cancer	'--	Sister	'--	'--	yes	'--	'--
+HCMI-CMDC	b3b23c0b-a9bd-434a-9875-5cfba04cfe7f	HCM-SANG-0273-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	no	'--	'--
+HCMI-CMDC	b3c6f765-beb5-4d1f-938e-9f96b33f4ef1	HCM-EXPT-1235-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	unknown	'--	'--
+TCGA-COAD	b4c3cf95-a27c-4bcf-9321-38723473e83b	TCGA-AA-3855	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+HCMI-CMDC	b5fe3fa5-0f46-4e63-8e1f-dc3d28734936	HCM-CSHL-0065-C20	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	no	'--	'--
+TCGA-COAD	b728e6e8-a0e4-496b-904c-6f07c12e901f	TCGA-A6-3810	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+TCGA-COAD	b95720b1-aa00-4c6a-b202-3350d035829f	TCGA-AA-3489	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+TCGA-COAD	bc42fe2d-1a33-428d-a601-b1871f4c8d9b	TCGA-AA-3966	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+TCGA-COAD	bce3ce45-4fb3-4d8e-9ec7-d24427c2ba4d	TCGA-AA-3692	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+TCGA-COAD	bce5579c-08c6-48e9-853e-fac85ba8cbea	TCGA-AA-3831	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+HCMI-CMDC	bd21e38c-bc6a-42f4-b10a-64f009c0d25a	HCM-CSHL-0880-C18	'--	'--	'--	Cancer	'--	First Degree Relative, NOS	'--	'--	yes	'--	'--
+TCGA-LIHC	bfd20d71-18a5-4f01-8d56-84378ad92359	TCGA-FV-A3I1	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+HCMI-CMDC	bfe15f44-e1dd-46ed-b429-908822d0a781	HCM-CSHL-0056-C18	'--	'--	'--	Cancer	'--	First Degree Relative, NOS	'--	'--	yes	'--	'--
+TCGA-COAD	c113808a-773f-4179-82d6-9083518404b5	TCGA-AD-6548	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+HCMI-CMDC	c39349d1-2cde-48d8-8a20-4ec319edd0d7	HCM-SANG-0276-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	unknown	'--	'--
+HCMI-CMDC	c446e9cd-f5cc-4daa-b573-b261d7ea8f42	HCM-CSHL-0237-C18	'--	'--	'--	Colorectal Cancer	'--	First Degree Relative, NOS	'--	'--	yes	'--	'--
+TCGA-COAD	c4d74653-d26b-4e51-aee0-82ee3d42f883	TCGA-AA-3517	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+HCMI-CMDC	c7a011a7-e72c-4535-8367-43d07d80fb67	HCM-SANG-0274-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	unknown	'--	'--
+TCGA-LIHC	c7f1b389-aec7-4993-8afb-b7a56064f8fc	TCGA-BW-A5NQ	'--	'--	'--	Cancer	'--	'--	'--	'--	unknown	'--	'--
+HCMI-CMDC	c95492e0-26ba-4a9c-a99b-f6aee9d33f20	HCM-CSHL-1270-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	unknown	'--	'--
+TCGA-PAAD	ca2da39a-263c-4238-9826-de7d52e63d0f	TCGA-IB-7891	'--	'--	'--	Cancer	'--	'--	'--	'--	yes	'--	'--
+HCMI-CMDC	cd6f37d5-d192-48b9-a63f-54d8d1e810c6	HCM-CSHL-0064-C18	'--	'--	'--	Cancer	'--	First Degree Relative, NOS	'--	'--	yes	'--	'--
+HCMI-CMDC	cf3e235e-676c-45de-a746-2ea45fd2142f	HCM-SANG-0282-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	no	'--	'--
+HCMI-CMDC	d000dcfe-181c-46fe-93ba-5fce8336b52d	HCM-CSHL-0057-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	no	'--	'--
+TCGA-COAD	d17a2ab0-faef-40de-a87d-1291868b200d	TCGA-AA-3679	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+TCGA-COAD	d181c72b-843c-4b2d-b014-2a6dd1c3c1ec	TCGA-AA-3553	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+HCMI-CMDC	d1cf2815-e9df-410a-a62e-e74883edc960	HCM-SANG-1334-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	unknown	'--	'--
+TCGA-COAD	d3062aac-4c42-41b4-a9f3-90aa72e6fb1e	TCGA-F4-6569	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+HCMI-CMDC	d4e59654-f1b9-40a7-bfef-b57eaf571aef	HCM-STAN-1113-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	no	'--	'--
+TCGA-COAD	d5619045-060a-4b60-86e4-6a5774994fd4	TCGA-AA-3989	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+TCGA-COAD	d651f9ba-8746-46c4-852c-6c2992c7d10e	TCGA-AA-3667	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+HCMI-CMDC	d77ca75a-491a-4616-9a1c-7b69fdd03585	HCM-CSHL-0258-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	no	'--	'--
+TCGA-COAD	d7ebd11a-1339-4b28-be90-a788d2cfa706	TCGA-AA-3811	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+TCGA-COAD	d9d7f0d4-fa64-48f2-8037-52cbf0b34ad8	TCGA-AA-3516	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+TCGA-COAD	d9fb85c3-ade1-47bf-8159-170f81eb130f	TCGA-AA-3662	'--	'--	'--	Cancer	'--	'--	'--	'--	yes	1	'--
+HCMI-CMDC	daf1dd34-2188-4cb0-95a5-286e0a0ba5ad	HCM-SANG-0269-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	no	'--	'--
+TCGA-READ	db1e3104-8bfd-4353-854a-c478ba1f7d07	TCGA-AG-3582	'--	'--	'--	Colorectal Cancer	'--	'--	'--	'--	no	'--	'--
+TCGA-COAD	dbbee8f5-d83d-4195-85cf-f89d327da0a9	TCGA-A6-5657	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+TCGA-COAD	dca004bf-9c14-45a1-b186-ab3759f6c7fe	TCGA-AA-3685	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+TCGA-STAD	dccd3854-8865-4452-9f1c-97283509b553	TCGA-VQ-AA6F	'--	'--	'--	Gastric Cancer	'--	'--	'--	'--	no	'--	'--
+TCGA-COAD	dde411b2-5d2b-4638-8149-89bc1eb3c7ad	TCGA-AA-3697	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+TCGA-COAD	ddf69ed9-4c53-48b8-9f01-495bd60c3425	TCGA-AA-3514	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+HCMI-CMDC	de19bdf6-63b3-4e75-bf11-a7b6ebcea466	HCM-CSHL-0317-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	unknown	'--	'--
+HCMI-CMDC	df69a9b0-63a6-47f4-b3a7-beb37edf100d	HCM-CSHL-0245-C18	'--	'--	'--	Cancer	'--	First Degree Relative, NOS	'--	'--	yes	'--	'--
+TCGA-COAD	e5921d6b-51cf-44be-b295-610cf7c3a69a	TCGA-A6-2685	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+HCMI-CMDC	e681e4d0-b358-49ad-9ef8-88a32a6acb12	HCM-CSHL-0664-C18	'--	'--	'--	Cancer	'--	First Degree Relative, NOS	'--	'--	yes	'--	'--
+TCGA-COAD	e6ec5a68-7555-4f26-bd7e-9cdb4c5f7004	TCGA-AA-3549	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+HCMI-CMDC	e802e579-5293-465c-a867-74e290268299	HCM-CSHL-0063-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	no	'--	'--
+TCGA-COAD	e831369c-78c0-4c75-9cf3-f46ed669312e	TCGA-AA-3544	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+TCGA-COAD	e8841edf-e070-425b-b4d4-bbb2115f9dbd	TCGA-AA-3973	'--	'--	'--	Cancer	'--	'--	'--	'--	yes	1	'--
+HCMI-CMDC	e980e3c5-a9fb-42ad-ad02-b8bedc54ce23	HCM-SANG-0285-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	unknown	'--	'--
+TCGA-COAD	ea923671-3903-4a79-830d-e7e4b1eabab0	TCGA-AD-6899	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+HCMI-CMDC	eb537fd2-ac06-4f63-8c0a-0ca73dd06a3a	HCM-SANG-0283-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	unknown	'--	'--
+HCMI-CMDC	ed6a9222-9826-415b-8a1b-517fde951b60	HCM-EXPT-1238-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	unknown	'--	'--
+TCGA-COAD	eeb42912-0c7a-46bb-bd95-369b2b425727	TCGA-F4-6570	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+HCMI-CMDC	f010de34-4d60-4760-b9ea-63850c34caad	HCM-EXPT-1199-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	unknown	'--	'--
+HCMI-CMDC	f36d1708-d159-4429-a667-57107751c9ca	HCM-EXPT-1218-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	unknown	'--	'--
+TCGA-COAD	f38d49b7-6cad-4460-abd0-3685a3b2d941	TCGA-AA-3814	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+HCMI-CMDC	f49e41f1-ab0a-4e6e-9780-2acdb94fa820	HCM-CSHL-0384-D37	'--	'--	'--	Cancer	'--	First Degree Relative, NOS	'--	'--	yes	'--	'--
+HCMI-CMDC	f5a13bb2-47f3-499d-b33f-b1caeb5e928b	HCM-CSHL-0838-C18	'--	'--	'--	Cancer	'--	First Degree Relative, NOS	'--	'--	yes	'--	'--
+HCMI-CMDC	f5dccb7f-c0c5-4990-9092-6f0875a1fe04	HCM-SANG-1300-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	no	'--	'--
+HCMI-CMDC	f6a13511-0819-4219-bc4b-6cb146629f0e	HCM-CSHL-0729-C18	'--	'--	'--	Cancer	'--	First Degree Relative, NOS	'--	'--	yes	'--	'--
+HCMI-CMDC	f8a9aab0-6017-483d-b053-9393c6a5af2d	HCM-SANG-0265-C18	'--	'--	'--	'--	'--	First Degree Relative, NOS	'--	'--	no	'--	'--
+TCGA-COAD	f9b5e6a5-c2da-4a0d-9251-bb6f557b7b58	TCGA-AA-3660	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
+HCMI-CMDC	f9d5bd26-816b-4aaa-809f-19d4b8d74692	HCM-CSHL-0241-C18	'--	'--	'--	Colorectal Cancer	'--	First Degree Relative, NOS	'--	'--	yes	'--	'--
+TCGA-READ	fbcd7e69-533f-4b6c-9868-162139135b58	TCGA-AG-3742	'--	'--	'--	Colorectal Cancer	'--	'--	'--	'--	no	'--	'--
+HCMI-CMDC	fdfd5770-4b64-4d35-b472-9c7908210b22	HCM-CSHL-0142-C18	'--	'--	'--	Cancer	'--	First Degree Relative, NOS	'--	'--	yes	'--	'--
+TCGA-COAD	fdffda5f-72b2-4153-b7f1-d7043b7ca898	TCGA-AA-3818	'--	'--	'--	Cancer	'--	'--	'--	'--	no	'--	'--
