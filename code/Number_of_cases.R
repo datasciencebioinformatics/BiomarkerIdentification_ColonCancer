@@ -18,5 +18,10 @@ df_trend[which(df_trend$Sex == 2),"Sex"]<-"Female"
 df_trend$Sex<-as.factor(df_trend$Sex)
 
 # Plot the overall trend for both sexes.
-p1<-ggplot(data=df_trend, aes(x=Year, y=Statistics, group=Sex, color=Sex)) +   geom_line()+  geom_point() + theme(axis.text.x = element_text(angle = 90, hjust = 1)) + theme_bw() + ggtitle("") + theme(legend.position = "bottom",panel.grid = element_blank()) + ylab("crude rate") + xlab("year")
+p1<-ggplot(data=df_trend, aes(x=Year, y=Statistics, group=Sex, color=Sex)) +   geom_line()+  geom_point() + theme(axis.text.x = element_text(angle = 90, hjust = 1)) + theme_bw() + ggtitle("") + theme(legend.position = "bottom",panel.grid = element_blank()) + ylab("crude rate") + xlab("year") 
+        
 
+# bwplot               
+png(filename=paste(output_dir,"Trned_number_of_cases.png",sep=""), width = 15, height = 15, res=600, units = "cm")  
+  p1
+dev.off()
