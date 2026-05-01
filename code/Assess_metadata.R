@@ -21,11 +21,14 @@ p1<-ggplot(complete_data_per_variable, aes(x=variable, y=completeness)) +  geom_
 
 # bwplot               
 png(filename=paste(output_dir,"Variable_completeness.png",sep=""), width = 15, height = 15, res=600, units = "cm")  
-  p1 + ylab("completeness %")
+  p1 + ylab("completeness %") 
 dev.off()
 ##############################################################################################
+# https://www.sthda.com/english/wiki/ggplot2-barplots-quick-start-guide-r-software-and-data-visualization
+# Add the count table
+df2<-reshape2::melt(table(metadata[,c("demographic.gender", "samples.tissue_type")]),by="demographic.gender")
 
-ggplot(metadata, aes(y = samples.tissue_type)) +  geom_bar(aes(fill = demographic.gender), position = position_stack(reverse = TRUE)) +  theme(legend.position = "top") + theme_bw()
-
-"demographic.gender" with "samples.tissue_type"
+p1<-ggplot(metadata, aes(y = samples.tissue_type)) +  geom_bar(aes(fill = demographic.gender), position = position_stack(reverse = TRUE)) +  theme(legend.position = "top") + theme_bw()+  theme(legend.position = "bottom",panel.grid = element_blank())  + geom_text( stat = 'count', aes(label = after_stat(count)), position = position_dodge(width = 0.9), vjust = -0.5 )
+ 
+"demographic.gender", "samples.tissue_type"
 "demographic.race" with "samples.tissue_type"
