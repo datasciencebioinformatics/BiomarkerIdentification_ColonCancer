@@ -1,9 +1,12 @@
 # Selected variables
 selected_variables<-c("samples.tissue_type", "demographic.age_at_index", "demographic.ethnicity", "demographic.gender", "demographic.race", "diagnoses.tissue_or_organ_of_origin")
 
+#
 ##############################################################################################
 # Percentage of complete data
 complete_data_per_variable<-data.frame(variable=c(),completeness=c())
+
+# Set NA, unknown, --' as missing
 
 # For each column, convert to numeric
 for (variable in colnames(metadata[,selected_variables]))
@@ -52,7 +55,7 @@ df_cumsum[which(df_cumsum$demographic.gender=="female" & df_cumsum$samples.tissu
 
 # Create the barplot
 p1<-ggplot(data=df_cumsum, aes(x=demographic.gender, y=value, fill=samples.tissue_type)) +  geom_bar(stat="identity")+  geom_text(aes(y=label_ypos, label=value), vjust=1.6,  color="white", size=3.5)+  scale_fill_brewer(palette="Paired")+  theme_minimal()  + theme(legend.position = "bottom",panel.grid = element_blank())  + coord_flip()
-
+##############################################################################################
 
 
 
