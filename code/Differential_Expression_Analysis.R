@@ -14,7 +14,7 @@ res_tumor_normal <- results(dds_tumor_normal, contrast=c("Tissue.Type","Tumor","
 res_tumor_normal<-data.frame(res_tumor_normal[which(res_tumor_normal$padj<0.05 & abs(res_tumor_normal$log2FoldChange)>3.0),])
 
 # From the File.ID, only the ID is kept in the variable sample_id
-write_xlsx(res_tumor_normal,paste(output_dir,paste("res_tumor_normal",".xlsx",sep=""),sep=""))
+write_xlsx(res_tumor_normal,paste(output_dir,paste("SupplementalTableS1",".xlsx",sep=""),sep=""))
 
 
 ########################################################################
