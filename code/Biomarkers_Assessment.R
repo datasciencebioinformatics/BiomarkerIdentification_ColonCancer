@@ -25,7 +25,7 @@ vsd_tumor_normal   <- vst(dds_tumor_normal, blind = FALSE)[all_tumor,]
 pcaData_tumor_normal      <- plotPCA(vsd_tumor_normal, intgroup = c("Tissue.Type"), returnData = TRUE, ntop=length(all_tumor))
 
 # 2. Calculate percentage of variance for axis labels
-percentVar <- round(100 * attr(pcaData, "percentVar"))
+percentVar <- round(100 * attr(pcaData_tumor_normal, "percentVar"))
 
 # Melt tabele
 # Plot_raw_vibration_data.png                                                                                                            
