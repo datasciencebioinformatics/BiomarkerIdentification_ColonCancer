@@ -37,7 +37,7 @@ merged_data_patient_info<-merged_data_patient_info[which(grepl(pattern="*.rna_se
 merged_data_patient_info$sample_id<-gsub(".rna_seq.augmented_star_gene_counts.tsv", "", merged_data_patient_info$File.Name)
 
 # Subset only Colon, NOS
-merged_data_patient_info<-metadata[which(metadata$diagnoses.tissue_or_organ_of_origin ==  "Colon, NOS"),]
+merged_data_patient_info<-merged_data_patient_info[which(merged_data_patient_info$diagnoses.tissue_or_organ_of_origin ==  "Colon, NOS"),]
 
 # Selected variables
 selected_variables<-c("File.ID","samples.tissue_type", "demographic.age_at_index", "demographic.ethnicity", "demographic.gender", "demographic.race", "diagnoses.tissue_or_organ_of_origin")
