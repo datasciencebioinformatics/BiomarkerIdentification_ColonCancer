@@ -1,32 +1,31 @@
 # BiomarkerIdentification_ColonCancer
 ###################################################################################################
 ## Pre-configuration
-project_folder="/home/felipe/Documents/BiomarkerIdentification_ColonCancer/"
+project_folder="/home/felipe/Documents/GitHub/BiomarkerIdentification_ColonCancer/"
 project_folder="C:/Users/felip/OneDrive/Documentos/GitHub/BiomarkerIdentification_ColonCancer/"
 
-### 1- Load R packages
-source(paste(project_folder,"/code/Number_of_cases.R",sep=""))
+### 1- Add the version control
+source(paste(project_folder,"/code/Version_Control.R",sep=""))
 
 ### 2- Load R packages
 source(paste(project_folder,"/code/Load_All_R_Packages.R",sep=""))
 
-### 3- Add the version control
-source(paste(project_folder,"/code/Version_Control.R",sep=""))
+### 3- Assess the number of cases
+source(paste(project_folder,"/code/Number_of_cases.R",sep=""))
 ###################################################################################################
 ## Data analayss
 ### 4- Load metadata
 source(paste(project_folder,"/code/Load_metadata.R",sep=""))
 
-### 5- Assess metadata
-source(paste(project_folder,"/code/Assess_metadata.R",sep=""))
-
-###################################################################################################
 ## Differential expression framework in R
-### 6- Generate read counts table 
+### 5- Generate read counts table 
 source(paste(project_folder,"/code/Generate_read_counts_table.R",sep=""))
 
-### 7- Differential expression analyss
+### 6- Differential expression analyss
 source(paste(project_folder,"/code/Differential_Expression_Analysis.R",sep=""))
+
+### 5- Assess metadata
+source(paste(project_folder,"/code/Assess_metadata.R",sep=""))
 ###################################################################################################
 
 ## Biomarker assessment
