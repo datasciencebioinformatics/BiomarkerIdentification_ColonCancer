@@ -35,6 +35,7 @@ png(filename=paste(output_dir,"PCA_DESeq.png",sep=""), width = 20, height = 20, 
 dev.off()
 
 #######################################################################################################################################
+# 
 # Take the normal samples, tumor samples, primary samples, metastic samples
 normal_sample_ids     <- rownames(sample_sheet_data[which(sample_sheet_data$Tissue.Type     == "Normal"),])
 tumor_sample_ids      <- rownames(sample_sheet_data[which(sample_sheet_data$Tissue.Type     == "Tumor"),])
