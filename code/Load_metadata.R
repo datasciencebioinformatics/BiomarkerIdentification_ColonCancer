@@ -12,41 +12,76 @@ gdc_sample_sheet_data$sample_submitter_id<-gdc_sample_sheet_data$Sample.ID
 # Set path to files                                                                                                 
 clinical_file=paste(project_folder,"metadata/clinical.tsv",sep="")
 sample_file=paste(project_folder,"metadata/sample.tsv",sep="")
-exposure_file=paste(project_folder,"metadata/exposure.tsv",sep="")
 
 # Load data
 clinical_data<-read.delim(file = clinical_file, sep = '\t', header = TRUE,fill=TRUE)    
 sample_data<-read.delim(file = sample_file, sep = '\t', header = TRUE,fill=TRUE)                                    
 
-exposure_data<-read.delim(file = exposure_file, sep = '\t', header = TRUE,fill=TRUE)                                #
+# Add collumns to sample_data
+sample_data$cases.submitter_id_y            <-""
+sample_data$demographic.age_at_index        <-""
+sample_data$demographic.ethnicity           <-""
+sample_data$demographic.gender              <-""
+sample_data$demographic.race                <-""
+sample_data$demographic.sex_at_birth        <-""
 
-# Merge data
-merged_sample_clinical_data<-merge(sample_data,clinical_data,by.x="cases.case_id",by.y="cases.case_id", all = TRUE)
+# Subset collumns
+clinical_data<-unique(clinical_data[,c("cases.submitter_id","cases.case_id","demographic.age_at_index" ,"demographic.ethnicity", "demographic.gender", "demographic.race","demographic.sex_at_birth")])
 
-# Merge tables
-merged_data_patient_info<-merge(merged_sample_clinical_data,gdc_sample_sheet_data,by.x="cases.submitter_id.x",by.y="sample_submitter_id", all = TRUE)
+
+# For each samples
+for (sample_id in rownames(sample_data))
+{  
+  # Take the cases.case_id
+  cases.case_id<-sample_data[sample_id,"cases.case_id"]
+
+  cases.submitter_id_y      =clinical_data[which(clinical_data$cases.case_id == cases.case_id),"cases.submitter_id"]
+  demographic.age_at_index  =clinical_data[which(clinical_data$cases.case_id == cases.case_id),"demographic.age_at_index"]
+  demographic.ethnicity     =clinical_data[which(clinical_data$cases.case_id == cases.case_id),"demographic.ethnicity"]
+  demographic.gender        =clinical_data[which(clinical_data$cases.case_id == cases.case_id),"demographic.gender"]
+  demographic.race          =clinical_data[which(clinical_data$cases.case_id == cases.case_id),"demographic.race"]
+  demographic.sex_at_birth  =clinical_data[which(clinical_data$cases.case_id == cases.case_id),"demographic.sex_at_birth"]
+
+  # Take the cases.case_id
+  sample_data[which(sample_data$cases.case_id == cases.case_id),"cases.submitter_id_y"]       <-  cases.submitter_id_y
+  sample_data[which(sample_data$cases.case_id == cases.case_id),"demographic.age_at_index"]   <-  demographic.age_at_index
+  sample_data[which(sample_data$cases.case_id == cases.case_id),"demographic.ethnicity"]      <-  demographic.ethnicity
+  sample_data[which(sample_data$cases.case_id == cases.case_id),"demographic.gender"]         <-  demographic.gender
+  sample_data[which(sample_data$cases.case_id == cases.case_id),"demographic.race"]           <-  demographic.race
+  sample_data[which(sample_data$cases.case_id == cases.case_id),"demographic.sex_at_birth"]   <-  demographic.sex_at_birth  
+}
+
+# Add collumns to sample_data
+gdc_sample_sheet_data$cases.submitter_id_y            <-""
+gdc_sample_sheet_data$demographic.age_at_index        <-""
+gdc_sample_sheet_data$demographic.ethnicity           <-""
+gdc_sample_sheet_data$demographic.gender              <-""
+gdc_sample_sheet_data$demographic.race                <-""
+gdc_sample_sheet_data$demographic.sex_at_birth        <-""
+
+# For each sample in sheet data
+for (sample_id in rownames(gdc_sample_sheet_data))
+{
+  # Take the Sample.ID
+  Case.ID<-gdc_sample_sheet_data[sample,"Case.ID"]
+
+  gdc_sample_sheet_data[sample_id,"demographic.age_at_index"]<-clinical_data[which(clinical_data$cases.submitter == Case.ID),"demographic.age_at_index"]
+  gdc_sample_sheet_data[sample_id,"demographic.ethnicity"]<-clinical_data[which(clinical_data$cases.submitter == Case.ID),"demographic.ethnicity"]
+  gdc_sample_sheet_data[sample_id,"demographic.gender"]<-clinical_data[which(clinical_data$cases.submitter == Case.ID),"demographic.gender"]
+  gdc_sample_sheet_data[sample_id,"demographic.race"]<-clinical_data[which(clinical_data$cases.submitter == Case.ID),"demographic.race"]
+  gdc_sample_sheet_data[sample_id,"demographic.sex_at_birth"]<-clinical_data[which(clinical_data$cases.submitter == Case.ID),"demographic.sex_at_birth"]
+}
+
 
 #####################################################################################################################
-# Set file name variable 
-merged_data_patient_info<-merged_data_patient_info[merged_data_patient_info$Data.Category=="Transcriptome Profiling",]
-
-# Check which entries contains the words .rna_seq.augmented_star_gene_counts.tsv
-merged_data_patient_info<-merged_data_patient_info[which(grepl(pattern="*.rna_seq.augmented_star_gene_counts.tsv", x=merged_data_patient_info$File.Name)),]
-
-# From the File.ID, only the ID is kept in the variable sample_id
-merged_data_patient_info$sample_id<-gsub(".rna_seq.augmented_star_gene_counts.tsv", "", merged_data_patient_info$File.Name)
-
-# Subset only Colon, NOS
-merged_data_patient_info<-merged_data_patient_info[which(merged_data_patient_info$diagnoses.tissue_or_organ_of_origin ==  "Colon, NOS"),]
-
-# Selected variables
-selected_variables<-c("File.ID","samples.tissue_type", "demographic.age_at_index", "demographic.ethnicity", "demographic.gender", "demographic.race", "diagnoses.tissue_or_organ_of_origin")
-
 # Select metadata 
-metadata<-unique(merged_data_patient_info[,selected_variables])
+metadata<-gdc_sample_sheet_data
 
 # From the File.ID, only the ID is kept in the variable sample_id
 write_xlsx(metadata,paste(project_folder,"tables/metadata.xlsx",sep=""))
+
+
+
 
 
 
