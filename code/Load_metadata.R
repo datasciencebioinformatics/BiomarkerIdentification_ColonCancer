@@ -63,13 +63,13 @@ gdc_sample_sheet_data$demographic.sex_at_birth        <-""
 for (sample_id in rownames(gdc_sample_sheet_data))
 {
   # Take the Sample.ID
-  Case.ID<-gdc_sample_sheet_data[sample,"Case.ID"]
+  Case.ID<-gdc_sample_sheet_data[sample_id,"Case.ID"]
 
-  gdc_sample_sheet_data[sample_id,"demographic.age_at_index"]<-clinical_data[which(clinical_data$cases.submitter == Case.ID),"demographic.age_at_index"]
-  gdc_sample_sheet_data[sample_id,"demographic.ethnicity"]<-clinical_data[which(clinical_data$cases.submitter == Case.ID),"demographic.ethnicity"]
-  gdc_sample_sheet_data[sample_id,"demographic.gender"]<-clinical_data[which(clinical_data$cases.submitter == Case.ID),"demographic.gender"]
-  gdc_sample_sheet_data[sample_id,"demographic.race"]<-clinical_data[which(clinical_data$cases.submitter == Case.ID),"demographic.race"]
-  gdc_sample_sheet_data[sample_id,"demographic.sex_at_birth"]<-clinical_data[which(clinical_data$cases.submitter == Case.ID),"demographic.sex_at_birth"]
+  gdc_sample_sheet_data[sample_id,"demographic.age_at_index"]<-unique(sample_data[which(sample_data$cases.submitter_id == Case.ID),"demographic.age_at_index"])
+  gdc_sample_sheet_data[sample_id,"demographic.ethnicity"]   <-unique(sample_data[which(sample_data$cases.submitter_id == Case.ID),"demographic.ethnicity"])
+  gdc_sample_sheet_data[sample_id,"demographic.gender"]      <-unique(sample_data[which(sample_data$cases.submitter_id == Case.ID),"demographic.gender"])
+  gdc_sample_sheet_data[sample_id,"demographic.race"]        <-unique(sample_data[which(sample_data$cases.submitter_id == Case.ID),"demographic.race"])
+  gdc_sample_sheet_data[sample_id,"demographic.sex_at_birth"]<-unique(sample_data[which(sample_data$cases.submitter_id == Case.ID),"demographic.sex_at_birth"])
 }
 
 
