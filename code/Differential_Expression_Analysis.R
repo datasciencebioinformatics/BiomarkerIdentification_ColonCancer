@@ -11,7 +11,7 @@ dds_tumor_normal <- DESeq(dds_tumor_normal)
 res_tumor_normal <- results(dds_tumor_normal, contrast=c("Tissue.Type","Tumor","Normal"))
 
 # Take 
-res_tumor_normal<-data.frame(res_tumor_normal[which(res_tumor_normal$padj<0.05 & abs(res_tumor_normal$log2FoldChange)>1.5),])
+res_tumor_normal<-data.frame(res_tumor_normal[which(res_tumor_normal$padj<0.05 & abs(res_tumor_normal$log2FoldChange)>3.0),])
 ########################################################################
 # Second, Metastatic-Primary versus Not Applicable
 # Add diagnosis collumn
@@ -36,9 +36,9 @@ res_diagnosis_Metastatic    <- results(dds_diagnosis, contrast=c("diagnosis","Me
 res_diagnosis_Premalignant  <- results(dds_diagnosis, contrast=c("diagnosis","Premalignant","Normal"))
 
 # Take 
-res_diagnosis_Primary     <-data.frame(res_diagnosis_Primary[which(res_diagnosis_Primary$padj<0.05 & abs(res_diagnosis_Primary$log2FoldChange)>1.5),])
-res_diagnosis_Metastatic  <-data.frame(res_diagnosis_Metastatic[which(res_diagnosis_Metastatic$padj<0.05 & abs(res_diagnosis_Metastatic$log2FoldChange)>1.5),])
-res_diagnosis_Premalignant<-data.frame(res_diagnosis_Premalignant[which(res_diagnosis_Premalignant$padj<0.05 & abs(res_diagnosis_Premalignant$log2FoldChange)>1.5),])
+res_diagnosis_Primary     <-data.frame(res_diagnosis_Primary[which(res_diagnosis_Primary$padj<0.05 & abs(res_diagnosis_Primary$log2FoldChange)>3.0),])
+res_diagnosis_Metastatic  <-data.frame(res_diagnosis_Metastatic[which(res_diagnosis_Metastatic$padj<0.05 & abs(res_diagnosis_Metastatic$log2FoldChange)>3.0),])
+res_diagnosis_Premalignant<-data.frame(res_diagnosis_Premalignant[which(res_diagnosis_Premalignant$padj<0.05 & abs(res_diagnosis_Premalignant$log2FoldChange)>3.0),])
 ########################################################################
 
 
