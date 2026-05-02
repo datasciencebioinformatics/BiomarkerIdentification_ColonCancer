@@ -2,7 +2,6 @@
 ###################################################################################################
 ## Pre-configuration
 project_folder="/home/felipe/Documents/GitHub/BiomarkerIdentification_ColonCancer/"
-project_folder="C:/Users/felip/OneDrive/Documentos/GitHub/BiomarkerIdentification_ColonCancer/"
 
 ### 1- Add the version control
 source(paste(project_folder,"/code/Version_Control.R",sep=""))
@@ -26,12 +25,4 @@ source(paste(project_folder,"/code/Differential_Expression_Analysis.R",sep=""))
 
 ### 5- Assess metadata
 source(paste(project_folder,"/code/Assess_metadata.R",sep=""))
-###################################################################################################
-
-## Biomarker assessment
-### 8- Biomarkers identification
-source(paste(project_folder,"/code/Biomarkers_Identification.R",sep=""))
-
-### 9- Biomarkers assessment
-source(paste(project_folder,"/code/Biomarkers_Assessment.R",sep=""))
 ###################################################################################################
