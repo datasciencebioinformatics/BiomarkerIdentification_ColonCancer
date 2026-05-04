@@ -15,8 +15,9 @@ res_tumor_normal<-data.frame(res_tumor_normal[which(res_tumor_normal$padj<0.05 &
 
 # Add the gene names and gene symbols
 
+
 # From the File.ID, only the ID is kept in the variable sample_id
-write_xlsx(res_tumor_normal,paste(output_dir,paste("SupplementalTableS1",".xlsx",sep=""),sep=""))
+write_xlsx(cbind(Gene_symbol=correspondence_table[rownames(res_tumor_normal),2],res_tumor_normal),paste(output_dir,paste("SupplementalTableS1",".xlsx",sep=""),sep=""))
 ########################################################################
 # Second, Metastatic-Primary versus Not Applicable
 # Add diagnosis collumn
@@ -41,6 +42,9 @@ res_diagnosis_Metastatic    <- results(dds_diagnosis, contrast=c("diagnosis","Me
 res_diagnosis_Premalignant  <- results(dds_diagnosis, contrast=c("diagnosis","Premalignant","Normal"))
 
 # Add the gene names and gene symbols
+res_diagnosis_Primary<-cbind(Gene_symbol=correspondence_table[rownames(res_diagnosis_Primary),2],res_diagnosis_Primary)
+res_diagnosis_Metastatic<-cbind(Gene_symbol=correspondence_table[rownames(res_diagnosis_Metastatic),2],res_diagnosis_Metastatic)
+res_diagnosis_Premalignant<-cbind(Gene_symbol=correspondence_table[rownames(res_diagnosis_Premalignant),2],res_diagnosis_Premalignant)
 
 # Take 
 res_diagnosis_Primary     <-data.frame(res_diagnosis_Primary[which(res_diagnosis_Primary$padj<0.05 & abs(res_diagnosis_Primary$log2FoldChange)>3.0),])
