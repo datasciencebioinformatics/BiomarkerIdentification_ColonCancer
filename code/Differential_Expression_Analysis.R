@@ -86,5 +86,5 @@ res_diagnosis_Metastatic  <-data.frame(res_diagnosis_Metastatic[which(res_diagno
 res_diagnosis_Premalignant<-data.frame(res_diagnosis_Premalignant[which(res_diagnosis_Premalignant$padj<0.05 & abs(res_diagnosis_Premalignant$log2FoldChange)>3.0),])
 
 sheets <- list("Primary" = res_diagnosis_Primary, "Metastatic" = res_diagnosis_Metastatic, "Premalignant"=res_diagnosis_Premalignant )
-write_xlsx(sheets,,paste(output_dir,paste("SupplementalTableS2",".xlsx",sep=""),sep=""))
+write_xlsx(sheets,paste(output_dir,paste("SupplementalTableS2",".xlsx",sep=""),sep=""))
 ########################################################################
