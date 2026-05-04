@@ -77,9 +77,16 @@ for (sample_id in rownames(gdc_sample_sheet_data))
 # Select metadata 
 metadata<-gdc_sample_sheet_data
 
+# Method B: Using base R cut()
+metadata$age_groups <- cut(as.numeric(metadata$demographic.age_at_index), 
+                  breaks = c(seq(0, 100, by = 10), Inf), 
+                  right = FALSE, # Left-closed: [0,10), [10,20)...
+                  labels = c("0-9", "10-19", "20-29", "30-39", "40-49", 
+                             "50-59", "60-69", "70-79", "80-89", "90-99", "100+"))
+
 # From the File.ID, only the ID is kept in the variable sample_id
 write_xlsx(metadata,paste(project_folder,"tables/metadata.xlsx",sep=""))
-
+#####################################################################################################################
 
 
 
