@@ -84,7 +84,3 @@ res_diagnosis_Premalignant<-data.frame(res_diagnosis_Premalignant[which(res_diag
 sheets <- list("Primary" = res_diagnosis_Primary, "Metastatic" = res_diagnosis_Metastatic, "Premalignant"=res_diagnosis_Premalignant )
 write_xlsx(sheets,,paste(output_dir,paste("SupplementalTableS2",".xlsx",sep=""),sep=""))
 ########################################################################
-
-
-
-
