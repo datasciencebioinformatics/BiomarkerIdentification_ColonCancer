@@ -1,12 +1,12 @@
 # 1 - The corrspondence table between "gene_id" and	"gene_name"
 # Load one single reads file to obtain the correspondence betrween enesemble id and gene name
-sample=rownames(sample_sheet_data)[1]
+sample=rownames(metadata)[1]
 
 # Take the file id
-file_id<-sample_sheet_data[sample,"File.ID"]
+file_id<-metadata[sample,"File.ID"]
 
 # Take the name of the file
-file_name<-sample_sheet_data[sample,"File.Name"]
+file_name<-metadata[sample,"File.Name"]
 
 # Read the counts table
 counts_table<-read.delim(paste(project_folder,"data/",file_name,sep=""), skip = 5)
