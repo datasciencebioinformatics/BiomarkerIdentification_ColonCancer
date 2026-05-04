@@ -14,11 +14,10 @@ source(paste(project_folder,"/code/Number_of_cases.R",sep=""))
 
 ### 4- Load Correspondence Table
 source(paste(project_folder,"/code/Biomarkers_Correspondence_Table.R",sep=""))
-###################################################################################################
-## Data analayss
+
 ### 5- Load metadata
 source(paste(project_folder,"/code/Load_metadata.R",sep=""))
-
+###################################################################################################
 ## Differential expression framework in R
 ### 6- Generate read counts table 
 source(paste(project_folder,"/code/Generate_read_counts_table.R",sep=""))
