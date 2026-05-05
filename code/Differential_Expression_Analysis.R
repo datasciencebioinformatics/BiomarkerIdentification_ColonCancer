@@ -72,8 +72,8 @@ dds_sex_diagnostic <- DESeqDataSetFromMatrix(countData = read_counts_table,
 dds_sex_diagnostic <- DESeq(dds_sex_diagnostic)
 
 # Obtain the results
-res_Male_Tumor              <- results(dds_diagnosis, contrast=c("sex_diagnostic","male-Tumor","male-Tumor"))
-res_Female_Tumor            <- results(dds_diagnosis, contrast=c("sex_diagnostic","female-Tumor","female-Tumor"))
+res_Male_Tumor              <- results(dds_sex_diagnostic, contrast=c("sex_diagnostic","male-Tumor","male-Normal"))
+res_Female_Tumor            <- results(dds_sex_diagnostic, contrast=c("sex_diagnostic","female-Tumor","female-Normal"))
 
 # Add the gene names and gene symbols
 
