@@ -58,33 +58,30 @@ write_xlsx(sheets,paste(output_dir,paste("SupplementalTableS2",".xlsx",sep=""),s
 ########################################################################
 # Third, sex-specific genes
 # Add diagnosis collumn
-sample_sheet_data$diagnosis <- sample_sheet_data$Tumor.Descriptor
+metadata$sex_diagnostic <- paste(metadata$demographic.gender,metadata$Tissue.Type,sep="-")
 
-# Set the normal samples
-sample_sheet_data[which(sample_sheet_data$Tissue.Type == "Normal"),"diagnosis"]<-"Normal"
 
 # Create DESeqDataSet from your prepared matrix
-dds_diagnosis <- DESeqDataSetFromMatrix(countData = read_counts_table,
-                              colData = sample_sheet_data,
-                              design = ~ diagnosis)
+dds_sex_diagnostic <- DESeqDataSetFromMatrix(countData = read_counts_table,
+                              colData = metadata,
+                              design = ~ sex_diagnostic)
 
 
 
 # Run DeSeq2
-dds_diagnosis <- DESeq(dds_diagnosis)
+dds_sex_diagnostic <- DESeq(dds_sex_diagnostic)
 
 # Obtain the results
-res_diagnosis_Primary       <- results(dds_diagnosis, contrast=c("diagnosis","Primary","Normal"))
-res_diagnosis_Metastatic    <- results(dds_diagnosis, contrast=c("diagnosis","Metastatic","Normal"))
-res_diagnosis_Premalignant  <- results(dds_diagnosis, contrast=c("diagnosis","Premalignant","Normal"))
+res_Male_Tumor              <- results(dds_diagnosis, contrast=c("sex_diagnostic","male-Tumor","male-Tumor"))
+res_Female_Tumor            <- results(dds_diagnosis, contrast=c("sex_diagnostic","female-Tumor","female-Tumor"))
 
 # Add the gene names and gene symbols
 
 # Take 
-res_diagnosis_Primary     <-data.frame(res_diagnosis_Primary[which(res_diagnosis_Primary$padj<0.05 & abs(res_diagnosis_Primary$log2FoldChange)>3.0),])
-res_diagnosis_Metastatic  <-data.frame(res_diagnosis_Metastatic[which(res_diagnosis_Metastatic$padj<0.05 & abs(res_diagnosis_Metastatic$log2FoldChange)>3.0),])
-res_diagnosis_Premalignant<-data.frame(res_diagnosis_Premalignant[which(res_diagnosis_Premalignant$padj<0.05 & abs(res_diagnosis_Premalignant$log2FoldChange)>3.0),])
+res_Male_Tumor     <-data.frame(res_Male_Tumor[which(res_Male_Tumor$padj<0.05 & abs(res_Male_Tumor$log2FoldChange)>3.0),])
+res_Female_Tumor   <-data.frame(res_Female_Tumor[which(res_Female_Tumor$padj<0.05 & abs(res_Female_Tumor$log2FoldChange)>3.0),])
 
-sheets <- list("Primary" = res_diagnosis_Primary, "Metastatic" = res_diagnosis_Metastatic, "Premalignant"=res_diagnosis_Premalignant )
-write_xlsx(sheets,paste(output_dir,paste("SupplementalTableS2",".xlsx",sep=""),sep=""))
+
+sheets <- list("Male" = res_Male_Tumor, "Female" = res_Female_Tumor)
+write_xlsx(sheets,paste(output_dir,paste("SupplementalTableS3",".xlsx",sep=""),sep=""))
 ########################################################################
