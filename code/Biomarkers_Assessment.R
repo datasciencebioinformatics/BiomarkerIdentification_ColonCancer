@@ -1,9 +1,9 @@
 #######################################################################################################################################
 # Plot the veen diagram
-all_tumor=rownames(res_tumor_normal)
-primary_tumor=rownames(res_diagnosis_Primary)
-metastatic_tumor=rownames(res_diagnosis_Metastatic)
-premalignant_tumor=rownames(res_diagnosis_Premalignant)
+all_tumor=res_tumor_normal$Gene_symbol
+primary_tumor=res_diagnosis_Primary$Gene_symbol
+metastatic_tumor=res_diagnosis_Metastatic$Gene_symbol
+premalignant_tumor=res_diagnosis_Premalignant$Gene_symbol
 
 
 # generate the veen diagram1
