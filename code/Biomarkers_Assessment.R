@@ -10,12 +10,62 @@ premalignant_tumor=res_diagnosis_Premalignant$Gene_symbol
 stages_tumor_primary_metastatic_premalignant<-ggVennDiagram(list(tumor_genes    =all_tumor, primary=primary_tumor, metastatic=metastatic_tumor, premalignant=premalignant_tumor), label_alpha = 0) + scale_fill_viridis() + theme_bw() + ggtitle("") + theme(legend.position = "bottom",panel.grid = element_blank(), strip.background = element_blank(), panel.border = element_blank(), axis.title.x = element_blank(), axis.title.y = element_blank()) + theme(    axis.ticks.x = element_blank(),    axis.text.x = element_blank()  ) + theme(    axis.ticks.y = element_blank(),    axis.text.y = element_blank()  )
 
 # bwplot               
-png(filename=paste(output_dir,"VennDiagram_DESeq.png",sep=""), width = 25, height = 25, res=600, units = "cm")  
+png(filename=paste(output_dir,"VennDiagram_DESeq_Tumor.png",sep=""), width = 25, height = 25, res=600, units = "cm")  
   # Plot the bayesian network graph
   stages_tumor_primary_metastatic_premalignant
 dev.off()
 
+
 #######################################################################################################################################
+# Plot the veen diagram
+all_tumor=res_Male_Tumor$Gene_symbol
+female_tumor=res_Female_Tumor$Gene_symbol
+male_tumor=res_Male_Tumor$Gene_symbol
+
+
+
+# generate the veen diagram1
+stages_tumor_male<-ggVennDiagram(list(tumor_genes    =all_tumor, female_tumor=female_tumor, male_tumor=male_tumor), label_alpha = 0) + scale_fill_viridis() + theme_bw() + ggtitle("") + theme(legend.position = "bottom",panel.grid = element_blank(), strip.background = element_blank(), panel.border = element_blank(), axis.title.x = element_blank(), axis.title.y = element_blank()) + theme(    axis.ticks.x = element_blank(),    axis.text.x = element_blank()  ) + theme(    axis.ticks.y = element_blank(),    axis.text.y = element_blank()  )
+
+# bwplot               
+png(filename=paste(output_dir,"VennDiagram_DESeq_Sex.png",sep=""), width = 25, height = 25, res=600, units = "cm")  
+  # Plot the bayesian network graph
+  stages_tumor_male
+dev.off()
+
+#######################################################################################################################################
+# Plot the veen diagram
+genes_white=res_white$Gene_symbol
+
+
+# generate the veen diagram1
+stages_white<-ggVennDiagram(list(tumor_genes    =all_tumor, "white"=genes_white), label_alpha = 0) + scale_fill_viridis() + theme_bw() + ggtitle("") + theme(legend.position = "bottom",panel.grid = element_blank(), strip.background = element_blank(), panel.border = element_blank(), axis.title.x = element_blank(), axis.title.y = element_blank()) + theme(    axis.ticks.x = element_blank(),    axis.text.x = element_blank()  ) + theme(    axis.ticks.y = element_blank(),    axis.text.y = element_blank()  )
+
+# bwplot               
+png(filename=paste(output_dir,"VennDiagram_DESeq_Race.png",sep=""), width = 25, height = 25, res=600, units = "cm")  
+  # Plot the bayesian network graph
+  stages_white
+dev.off()
+#######################################################################################################################################
+#######################################################################################################################################
+# Plot the veen diagram
+genes_60_69=res_60_69$Gene_symbol
+genes_70_79=res_70_79$Gene_symbol
+genes_80_89=res_80_89$Gene_symbol
+
+
+
+# generate the veen diagram1
+stages_age<-ggVennDiagram(list(tumor_genes    =all_tumor, "60_69"=genes_60_69, "70_79"=genes_70_79, "80_89"=genes_80_89), label_alpha = 0) + scale_fill_viridis() + theme_bw() + ggtitle("") + theme(legend.position = "bottom",panel.grid = element_blank(), strip.background = element_blank(), panel.border = element_blank(), axis.title.x = element_blank(), axis.title.y = element_blank()) + theme(    axis.ticks.x = element_blank(),    axis.text.x = element_blank()  ) + theme(    axis.ticks.y = element_blank(),    axis.text.y = element_blank()  )
+
+# bwplot               
+png(filename=paste(output_dir,"VennDiagram_DESeq_Age.png",sep=""), width = 25, height = 25, res=600, units = "cm")  
+  # Plot the bayesian network graph
+  stages_age
+dev.off()
+#######################################################################################################################################
+
+
 # 2. Basic plot
 # 1. Transform data (vst is recommended for large datasets)
 vsd_tumor_normal   <- vst(dds_tumor_normal, blind = FALSE)[all_tumor,]
@@ -97,7 +147,19 @@ df_mean[rownames(tumor_biomarkers),]
 #######################################################################################################################################
 
 
+stages_tumor_primary_metastatic_premalignant<-stages_tumor_primary_metastatic_premalignant + ggtitle("A)") + theme(plot.title.position = "plot")
+stages_tumor_male<-stages_tumor_male+ ggtitle("B)") + theme(plot.title.position = "plot")
+stages_white<-stages_white+ ggtitle("C)") + theme(plot.title.position = "plot")
+stages_age<-stages_age+ ggtitle("D)") + theme(plot.title.position = "plot")
 
+# Arrange side-by-side
+grid.arrange(stages_tumor_primary_metastatic_premalignant,stages_tumor_male,stages_white,stages_age, ncol = 2)
+
+# bwplot               
+png(filename=paste(output_dir,"VennDiagram_DESeq_All.png",sep=""), width = 60, height = 40, res=600, units = "cm")  
+  # Plot the bayesian network graph
+  grid.arrange(stages_tumor_primary_metastatic_premalignant,stages_tumor_male,stages_white,stages_age, ncol = 2)
+dev.off()
 
 
 
