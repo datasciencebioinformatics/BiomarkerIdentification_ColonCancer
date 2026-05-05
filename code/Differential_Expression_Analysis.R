@@ -52,8 +52,6 @@ res_diagnosis_Primary     <-data.frame(res_diagnosis_Primary[which(res_diagnosis
 res_diagnosis_Metastatic  <-data.frame(res_diagnosis_Metastatic[which(res_diagnosis_Metastatic$padj<0.05 & abs(res_diagnosis_Metastatic$log2FoldChange)>3.0),])
 res_diagnosis_Premalignant<-data.frame(res_diagnosis_Premalignant[which(res_diagnosis_Premalignant$padj<0.05 & abs(res_diagnosis_Premalignant$log2FoldChange)>3.0),])
 
-cbind()
-
 sheets <- list("Primary" = res_diagnosis_Primary, "Metastatic" = res_diagnosis_Metastatic, "Premalignant"=res_diagnosis_Premalignant )
 write_xlsx(sheets,paste(output_dir,paste("SupplementalTableS2",".xlsx",sep=""),sep=""))
 ########################################################################
@@ -85,7 +83,6 @@ res_Female_Tumor<-cbind(Gene_symbol=correspondence_table[rownames(res_Female_Tum
 # Take 
 res_Male_Tumor     <-data.frame(res_Male_Tumor[which(res_Male_Tumor$padj<0.05 & abs(res_Male_Tumor$log2FoldChange)>3.0),])
 res_Female_Tumor   <-data.frame(res_Female_Tumor[which(res_Female_Tumor$padj<0.05 & abs(res_Female_Tumor$log2FoldChange)>3.0),])
-
 
 sheets <- list("Male" = res_Male_Tumor, "Female" = res_Female_Tumor)
 write_xlsx(sheets,paste(output_dir,paste("SupplementalTableS3",".xlsx",sep=""),sep=""))
@@ -158,8 +155,11 @@ res_white           <- results(dds_race_diagnostic, contrast=c("demographic.race
 # Add the gene names and gene symbols
 res_white<-cbind(Gene_symbol=correspondence_table[rownames(res_white),2],res_white)
 
+res_white   <-data.frame(res_white[which(res_white$padj<0.05 & abs(res_white$log2FoldChange)>3.0),])
 
-sheets <- list("white" = res_white)
-write_xlsx(sheets,paste(output_dir,paste("SupplementalTableS5",".xlsx",sep=""),sep=""))
+
+# Write file
+write_xlsx(res_white,paste(output_dir,paste("SupplementalTableS5",".xlsx",sep=""),sep=""))
+
 ########################################################################
 
