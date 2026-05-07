@@ -25,7 +25,7 @@ p1<-ggplot(complete_data_per_variable, aes(x=variable, y=completeness)) +  geom_
 
 # bwplot               
 png(filename=paste(output_dir,"Variable_completeness.png",sep=""), width = 15, height = 15, res=600, units = "cm")  
-  p1 + ylab("completeness %") + scale_colour_grey()
+  p1 + ylab("completeness %") + scale_colour_grey() + geom_text(aes(label = round(completeness,2)), hjust = -0.10)
 dev.off()
 
 ##############################################################################################
