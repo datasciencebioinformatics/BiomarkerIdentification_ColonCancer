@@ -24,7 +24,7 @@ rownames(complete_data_per_variable)<-complete_data_per_variable$variable
 p1<-ggplot(complete_data_per_variable, aes(x=variable, y=completeness)) +  geom_bar(stat = "identity") + coord_flip()  + theme_bw()
 
 # bwplot               
-png(filename=paste(output_dir,"Variable_completeness.png",sep=""), width = 17, height = 15, res=600, units = "cm")  
+png(filename=paste(output_dir,"Variable_completeness.png",sep=""), width = 20, height = 15, res=600, units = "cm")  
   p1 + ylab("completeness %") + scale_colour_grey() + geom_text(aes(label = round(completeness,2)), hjust = -0.10)
 dev.off()
 
