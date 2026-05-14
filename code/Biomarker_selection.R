@@ -1,5 +1,5 @@
 # Define resampling method (e.g., 10-fold cross-validation)
-train_control <- trainControl(method = "cv", number = 10)
+train_control <- trainControl(method = "repeatedcv", number = 10)
 
 # Add Tissue_Type collunn sample_sheet_data
 df_read_counts_table<-data.frame(t(read_counts_table[rownames(res_tumor_normal),]),Tissue_Type=sample_sheet_data[colnames(read_counts_table),"Tissue.Type"])
@@ -7,22 +7,8 @@ df_read_counts_table<-data.frame(t(read_counts_table[rownames(res_tumor_normal),
 # Cobvert to factor
 df_read_counts_table$Tissue_Type<-factor(df_read_counts_table$Tissue_Type)
 
-
-# Train the model using stepwise AIC
-random_forest <- train(Tissue_Type ~ ., 
-                    data = df_read_counts_table, 
-                    method = "rf", 
-                    trControl = train_control,
-                    trace = FALSE) # Set trace = FALSE to suppress iteration output
-
-# Train the model using stepwise AIC
-decision_tree <- train(Tissue_Type ~ ., 
-                    data = df_read_counts_table, 
-                    method = "rpart", 
-                    trControl = train_control,
-                    trace = FALSE) # Set trace = FALSE to suppress iteration output
-
-
+# decision tree
+decision_tree <-rpart(Tissue_Type ~ ., data = df_read_counts_table, method = "class")
 
 # bwplot               
 png(filename=paste(output_dir,"Tissue_Type_rpart.png",sep=""), width = 10, height = 10, res=600, units = "cm")  
