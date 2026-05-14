@@ -6,16 +6,16 @@ df_read_counts_table<-data.frame(t(read_counts_table[rownames(res_tumor_normal),
 
 
 # Train the model using stepwise AIC
-decision_tree <- train(Tissue_Type ~ ., 
+random_forest <- train(Tissue_Type ~ ., 
                     data = df_read_counts_table, 
-                    method = "rpart", 
+                    method = "rf", 
                     trControl = train_control,
                     trace = FALSE) # Set trace = FALSE to suppress iteration output
 
 # Train the model using stepwise AIC
-decision_tree <- train(Tissue.Type ~ ., 
+decision_tree <- train(Tissue_Type ~ ., 
                     data = read_counts_table, 
-                    method = "rpart", 
+                    method = "rf", 
                     trControl = train_control,
                     trace = FALSE) # Set trace = FALSE to suppress iteration output
 
@@ -36,6 +36,14 @@ random_forest <- train(Tissue.Type ~ .,
 
 # Get Variable Importance
 importance <- varImp(random_forest)
+
+data.frame(data.frame(importance$importance),gene_name= correspondence_table[rownames(importance$importance),"gene_name"])
+
+
+
+# Add the gene symbols
+correspondence_table
+
 
 # bwplot               
 png(filename=paste(output_dir,"Tissue_Type_varIMP.png",sep=""), width = 15, height = 15, res=600, units = "cm")  
