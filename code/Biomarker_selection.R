@@ -47,7 +47,7 @@ df_importance<-data.frame(data.frame(importance$importance),gene_name= correspon
 df_importance <- df_importance[order(-df_importance$Overall), ] 
 
 # Select top 20 biomarkers
-df_importance_top <-  head(df_importance,n=20)
+df_importance_top <-  head(df_importance,n=10)
 
 # Save the top selected biomarkers
 write_xlsx(df_mean[rownames(df_importance_top),], paste(output_dir,"df_importance_top.xlsx",sep=""))
