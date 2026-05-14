@@ -17,8 +17,8 @@ png(filename=paste(output_dir,"Tissue_Type_rpart.png",sep=""), width = 10, heigh
 dev.off()
 
 # Train the model using stepwise AIC
-random_forest <- train(Tissue.Type ~ ., 
-                    data = read_counts_table, 
+random_forest <- train(Tissue_Type ~ ., 
+                    data = df_read_counts_table, 
                     method = "rf", 
                     trControl = train_control,
                     trace = FALSE) # Set trace = FALSE to suppress iteration output
@@ -38,3 +38,16 @@ df_importance_top <-  head(df_importance,n=10)
 # Save the top selected biomarkers
 write_xlsx(df_mean[rownames(df_importance_top),], paste(output_dir,"df_importance_top.xlsx",sep=""))
 
+###############################################################
+# 1. Regressão linear múltipla (com seleção stepwise por AIC)
+# A seleção de modelo deve ser realizada utilizando o método stepwise regression com abordagem backward elimination, tendo como critério único a minimização do Akaike Information Criterion (AIC) para cada experimento e para cada variável de saída. A seleção deve ser realizada exclusivamente com dados de train. Nenhuma informação de test pode ser utilizada na seleção.
+# For the multiple linear regression, lm method was used to fit the trainning set on the surrogate models. StepAIC function was called to select the best model based on AIC. The trainning set was again used to fit on the selected model and obtain the prediction statistitics (RMSE, Rsquared, MAE with SD).
+
+# lm method was used to fit the trainning set on the surrogate models
+multiple_linear_regression_lm <- lm(Tissue_Type ~ ., data = df_read_counts_table)
+
+# Perform stepwise selection (direction "both", "backward", "forward")
+surrogate_model_final_lm <- stepAIC(multiple_linear_regression_lm, direction = "backward", trace = 0)
+
+# Train the linear model
+multiple_linear_regression_lm_selected <- caret::train(formula(surrogate_model_final_lm), data = training_set, method = "lm", trControl = train_control)
