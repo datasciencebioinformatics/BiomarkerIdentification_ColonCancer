@@ -25,9 +25,9 @@ decision_tree <- train(Tissue_Type ~ .,
 
 
 # bwplot               
-png(filename=paste(output_dir,"Tissue_Type_rpart.png",sep=""), width = 15, height = 15, res=600, units = "cm")  
+png(filename=paste(output_dir,"Tissue_Type_rpart.png",sep=""), width = 10, height = 10, res=600, units = "cm")  
   # Plot the bayesian network graph
-  fancyRpartPlot(Head_rpart, caption = NULL, sub=NULL)  
+  fancyRpartPlot(decision_tree, caption = NULL, sub=NULL)  
 dev.off()
 
 # Train the model using stepwise AIC
@@ -48,3 +48,8 @@ df_importance <- df_importance[order(-df_importance$Overall), ]
 
 # Select top 20 biomarkers
 df_importance_top <-  head(df_importance,n=20)
+
+# Save the top selected biomarkers
+df_mean[rownames(df_importance_top),]
+
+
