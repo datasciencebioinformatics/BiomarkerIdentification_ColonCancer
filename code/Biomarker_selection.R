@@ -51,3 +51,17 @@ surrogate_model_final_lm <- stepAIC(multiple_linear_regression_lm, direction = "
 
 # Train the linear model
 multiple_linear_regression_lm_selected <- caret::train(formula(surrogate_model_final_lm), data = training_set, method = "lm", trControl = train_control)
+
+#########################################################################################################
+df_read_counts_table$Tissue_Type<-as.numeric(df_read_counts_table$Tissue_Type)
+
+
+# Create bayesian networks
+bn_viscour <- hc(df_read_counts_table)
+tb_viscour <- tabu(df_read_counts_table)
+
+# bwplot               
+png(filename=paste(output_dir,"Bayesian_Network_structure.png",sep=""), width = 17, height = 17, res=600, units = "cm")  
+  # Plot the bayesian network graph
+  plot(as.igraph(tb_viscour), vertex.color="black",vertex.size=25,vertex.label.color="orange",layout=layout_with_kk)
+dev.off()
