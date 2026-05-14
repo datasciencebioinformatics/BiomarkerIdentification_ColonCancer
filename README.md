@@ -28,4 +28,7 @@ source(paste(project_folder,"/code/Differential_Expression_Analysis.R",sep=""))
 
 ### 8- Assess metadata
 source(paste(project_folder,"/code/Assess_metadata.R",sep=""))
+################################################################################################### 
+### 9- Biomarker selection
+source(paste(project_folder,"/code/Biomarker_selection.R",sep=""))
 ###################################################################################################
