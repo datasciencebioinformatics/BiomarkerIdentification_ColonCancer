@@ -3,11 +3,11 @@
 ## Pre-configuration
 project_folder="/home/felipe/Documents/GitHub/BiomarkerIdentification_ColonCancer/"
 
-### 1- Add the version control
-source(paste(project_folder,"/code/Version_Control.R",sep=""))
-
-### 2- Load R packages
+### 1- Load R packages
 source(paste(project_folder,"/code/Load_All_R_Packages.R",sep=""))
+
+### 2- Add the version control
+source(paste(project_folder,"/code/Version_Control.R",sep=""))
 
 ### 3- Assess the number of cases
 source(paste(project_folder,"/code/Number_of_cases.R",sep=""))
