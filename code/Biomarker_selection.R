@@ -50,6 +50,5 @@ df_importance <- df_importance[order(-df_importance$Overall), ]
 df_importance_top <-  head(df_importance,n=20)
 
 # Save the top selected biomarkers
-df_mean[rownames(df_importance_top),]
-
+write_xlsx(df_mean[rownames(df_importance_top),], paste(output_dir,"df_importance_top.xlsx",sep=""))
 
