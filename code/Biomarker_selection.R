@@ -14,8 +14,8 @@ random_forest <- train(Tissue_Type ~ .,
 
 # Train the model using stepwise AIC
 decision_tree <- train(Tissue_Type ~ ., 
-                    data = read_counts_table, 
-                    method = "rf", 
+                    data = df_read_counts_table, 
+                    method = "rpart", 
                     trControl = train_control,
                     trace = FALSE) # Set trace = FALSE to suppress iteration output
 
@@ -37,16 +37,11 @@ random_forest <- train(Tissue.Type ~ .,
 # Get Variable Importance
 importance <- varImp(random_forest)
 
-data.frame(data.frame(importance$importance),gene_name= correspondence_table[rownames(importance$importance),"gene_name"])
+# Save data.frame
+df_importance<-data.frame(data.frame(importance$importance),gene_name= correspondence_table[rownames(importance$importance),"gene_name"])
 
+# Sorts 'df' by the 'age' column in ascending order
+df_importance <- df_importance[order(-df_importance$Overall), ] 
 
-
-# Add the gene symbols
-correspondence_table
-
-
-# bwplot               
-png(filename=paste(output_dir,"Tissue_Type_varIMP.png",sep=""), width = 15, height = 15, res=600, units = "cm")  
-  # Plot Variable Importance
-  plot(importance, main="")
-dev.off()
+# Select top 20 biomarkers
+df_importance_top <-  head(df_importance,n=20)
