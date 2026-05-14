@@ -4,6 +4,9 @@ train_control <- trainControl(method = "cv", number = 10)
 # Add Tissue_Type collunn sample_sheet_data
 df_read_counts_table<-data.frame(t(read_counts_table[rownames(res_tumor_normal),]),Tissue_Type=sample_sheet_data[colnames(read_counts_table),"Tissue.Type"])
 
+# Cobvert to factor
+df_read_counts_table$Tissue_Type<-factor(df_read_counts_table$Tissue_Type)
+
 
 # Train the model using stepwise AIC
 random_forest <- train(Tissue_Type ~ ., 
