@@ -1,10 +1,14 @@
 # Define resampling method (e.g., 10-fold cross-validation)
 train_control <- trainControl(method = "cv", number = 10)
 
+# Add Tissue_Type collunn sample_sheet_data
+df_read_counts_table<-data.frame(t(read_counts_table[rownames(res_tumor_normal),]),Tissue_Type=sample_sheet_data[colnames(read_counts_table),"Tissue.Type"])
+
+
 # Train the model using stepwise AIC
-step_model_lm <- train(Tissue.Type ~ ., 
-                    data = read_counts_table, 
-                    method = "lmStepAIC", 
+decision_tree <- train(Tissue_Type ~ ., 
+                    data = df_read_counts_table, 
+                    method = "rpart", 
                     trControl = train_control,
                     trace = FALSE) # Set trace = FALSE to suppress iteration output
 
