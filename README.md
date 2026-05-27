@@ -18,13 +18,13 @@ source(paste(project_folder,"/code/Load_metadata.R",sep=""))
 ###################################################################################################
 ## Differential expression framework in R
 ### 5- Generate read counts table 
-source(paste(project_folder,"/code/Generate_read_counts_table.R",sep=""))
+source(paste(project_folder,"/code/Generate_read_counts_table.R",sep=""))+
 
-### 6- Differential expression analyss
-source(paste(project_folder,"/code/Differential_Expression_Analysis.R",sep=""))
-
-### 7- Load Correspondence Table
+### 6- Load Correspondence Table
 source(paste(project_folder,"/code/Biomarkers_Correspondence_Table.R",sep=""))
+
+### 7- Differential expression analyss
+source(paste(project_folder,"/code/Differential_Expression_Analysis.R",sep=""))
 
 ### 8- Assess metadata
 source(paste(project_folder,"/code/Assess_metadata.R",sep=""))
