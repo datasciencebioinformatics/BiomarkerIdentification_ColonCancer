@@ -31,10 +31,10 @@ tumor_sample_ids      <- rownames(sample_sheet_data[which(sample_sheet_data$Tiss
 # First, compile data.frame with 
 # Take p-value
 df_mean<-data.frame(
-    foldChange_Tumor_Normal=rowMeans(read_counts_table_tpm[rownames(res_tumor_normal),tumor_sample_ids])/rowMeans(read_counts_table_tpm[rownames(res_tumor_normal),normal_sample_ids]),
-    avg.normal=rowMeans(read_counts_table_tpm[rownames(res_tumor_normal),normal_sample_ids]),
+    foldChange_Tumor_Normal=rowMeans(read_counts_table_tpm[,tumor_sample_ids])/rowMeans(read_counts_table_tpm[,normal_sample_ids]),
+    avg.normal=rowMeans(read_counts_table_tpm[,normal_sample_ids]),
     std.normal=0,
-    avg.tumor=rowMeans(read_counts_table_tpm[rownames(res_tumor_normal),tumor_sample_ids]),
+    avg.tumor=rowMeans(read_counts_table_tpm[,tumor_sample_ids]),
     std.tumor=0)
 
   
