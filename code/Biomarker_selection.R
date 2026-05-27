@@ -2,7 +2,7 @@
 train_control <- trainControl(method = "repeatedcv", number = 10)
 
 # Add Tissue_Type collunn sample_sheet_data
-df_counts_table_tpm_cp<-data.frame(t(df_counts_table_tpm[rownames(res_tumor_normal),]),Tissue_Type=sample_sheet_data[colnames(df_counts_table_tpm),"Tissue.Type"])
+df_counts_table_tpm_cp<-data.frame(t(read_counts_table_tpm[rownames(res_tumor_normal),]),Tissue_Type=sample_sheet_data[colnames(read_counts_table_tpm),"Tissue.Type"])
 
 # Cobvert to factor
 df_counts_table_tpm_cp$Tissue_Type<-factor(df_counts_table_tpm_cp$Tissue_Type)
