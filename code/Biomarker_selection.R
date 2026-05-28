@@ -72,7 +72,7 @@ df_importance <- df_importance[order(-df_importance$Overall), ]
 df_importance_top <-  head(df_importance,n=10)
 
 # Save the top selected biomarkers
-write_xlsx(df_mean[rownames(df_importance_top),], paste(output_dir,"df_importance_top.xlsx",sep=""))
+write_xlsx(df_mean[rownames(df_importance_top),], paste(output_dir,"Table1.xlsx",sep=""))
 
 # 6. Model for combination of parameter
 model_comb <- caret::train(Tissue_Type ~ ., data = df_counts_table_tpm_cp_2, method = "rf", trControl = train_control)
