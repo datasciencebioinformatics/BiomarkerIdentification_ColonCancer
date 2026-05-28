@@ -75,7 +75,7 @@ df_importance_top <-  head(df_importance,n=10)
 write_xlsx(df_mean[rownames(df_importance_top),], paste(output_dir,"df_importance_top.xlsx",sep=""))
 
 # 6. Model for combination of parameter
-model_comb <- caret::train(Tissue_Type ~ ., data = df_counts_table_tpm_cp_2, method = "rpart", trControl = train_control)
+model_comb <- caret::train(Tissue_Type ~ ., data = df_counts_table_tpm_cp_2, method = "rf", trControl = train_control)
 
 rmse=round(model_comb$results$RMSE,2)
 mae=round(model_comb$results$MAE,2)
