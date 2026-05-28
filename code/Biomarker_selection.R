@@ -54,7 +54,7 @@ cor=round(model_comb$results$Cor,2)
 
 # Train the model using stepwise AIC
 random_forest <- train(Tissue_Type ~ ., 
-                    data = df_counts_table_tpm_cp, 
+                    data = df_counts_table_tpm_cp_2, 
                     method = "rf", 
                     trControl = train_control,
                     trace = FALSE) # Set trace = FALSE to suppress iteration output
